@@ -1,0 +1,74 @@
+.welcome-page-container {
+  padding: 0px 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-preview-container {
+  position: relative;
+}
+
+
+
+.welcome-preview {
+  width: 100%;
+
+  //max-width: 1400px;
+  //max-height: 600px;
+  background-color: black;
+  video {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 600px;
+   object-fit: initial;
+  }
+}
+
+
+.welcome-preview-text {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.welcome-bottom-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 64px 0 70px 0;
+}
+
+.welcome-bottom-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.welcome-bottom-address {
+  padding: 13.5px 66px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  border: 1px solid #000000;
+  border-radius: 32px;
+}
