@@ -11,53 +11,81 @@ import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
 
 import React from "react";
-import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
+import ThemeProvider from "./providers/ThemeProvider";
+import useTheme from "./hooks/useTheme";
+import Layout from "./components/Layout/Layout";
+import usePreloader from "./hooks/usePreloader";
 
-const images1 = [
-    `${contentPrefix}/images/slider/slider_1.jpg`,
-    `${contentPrefix}/images/slider/slider_2.jpg`,
-    `${contentPrefix}/images/slider/slider_2.jpg`,
-]
+const images1 = [`${contentPrefix}/images/slider/slider_1.jpg`, `${contentPrefix}/images/slider/slider_2.jpg`, `${contentPrefix}/images/slider/slider_2.jpg`,]
 
-const images2 = [
-    `${contentPrefix}/images/slider/slider_3.jpg`,
-    `${contentPrefix}/images/slider/slider_3.jpg`,
-    `${contentPrefix}/images/slider/slider_3.jpg`,
-]
+const images2 = [`${contentPrefix}/images/slider/slider_3.jpg`, `${contentPrefix}/images/slider/slider_3.jpg`, `${contentPrefix}/images/slider/slider_3.jpg`,]
 export default function App() {
-    const [isLoading, setIsLoading] = React.useState(true);
+    // const [isLoading, setIsLoading] = React.useState(true);
+    const {isDarkMode} = useTheme();
+    const {isVisible, setIsVisible} = usePreloader();
 
-    function showPreloader() {
-        setIsLoading(true);
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 750)
-        return () => clearTimeout(timer);
+    window.addEventListener('load', (event) => {
+        //setIsVisible(false);
+        // console.log("Page is ready");
+        setTimeout(() => {
+            setIsVisible(false);
+        }, 1000);
+        // return () => clearTimeout(timer);
+       // setIsVisible(false);
+    });
+    //
+    //
+    //
+    // useEffect(() => {
+    //     console.log("changing")
+    //     setIsLoading(true);
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 2000);
+    // }, [isDarkMode]);
+
+
+    const showPreloader = () => {
+
     }
 
-    React.useEffect(() => {
-        const timer = setTimeout(() => {
+    // function showPreloader() {
+    //     setTimeout(() => {
+    //         setIsLoading(true);
+    //     }, 500)
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //     }, 1500)
+    //     //clearTimeout(timer);
+    // }
 
-            setIsLoading(!isLoading);
-        }, 2000)
-        return () => clearTimeout(timer);
-    }, [])
-    return (
-        <div className="App">
-            <Preloader isVisible={isLoading}/>
-            <div className="app-content">
-                <ThemeToggle action={showPreloader}/>
-                <WelcomePage/>
-                <DescriptionPage/>
-                <InteriorPage images={images1}/>
-                <MenuPage/>
-                <SchedulePage/>
-                <FormPage/>
-                <Slider images={images2} toggleStyle={'round'}/>
-                <Map/>
-                <Footer/>
-            </div>
+    // React.useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //
+    //         setIsLoading(!isLoading);
+    //     }, 1500)
+    //     return () => clearTimeout(timer);
+    // }, [])
+    return (<ThemeProvider>
+            <div className="App">
+                <Preloader/>
+                <Layout>
 
-        </div>
+                    <div className="app-content">
+                        {/*<ThemeToggle action={showPreloader}/>*/}
+                        <WelcomePage/>
+                        <DescriptionPage/>
+                        <InteriorPage images={images1}/>
+                        <MenuPage/>
+                        <SchedulePage/>
+                        <FormPage/>
+                        <Slider images={images2} toggleStyle={'round'}/>
+                        <Map/>
+                        <Footer/>
+                    </div>
+
+                </Layout></div>
+        </ThemeProvider>
+
     );
 }

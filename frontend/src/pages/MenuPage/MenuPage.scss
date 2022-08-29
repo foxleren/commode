@@ -1,6 +1,9 @@
-#menu {
-  background-image: url(../../../public/images/menu_background.jpg);
+.menu-container {
+  background-image: url(../../../public/images/menu/menu_background_lightMode.jpg);
   padding: 57px 10px 51px 53px;
+  &.dark {
+    background-image: url(../../../public/images/menu/menu_background_darkMode.jpg);
+  }
 }
 
 .menu-title {

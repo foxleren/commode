@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
+import PreloaderProvider from "./providers/PreloaderProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <App />
+      <PreloaderProvider>
+          <App />
+      </PreloaderProvider>
+
   </React.StrictMode>
 );

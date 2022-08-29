@@ -2,11 +2,14 @@ import './WelcomePage.scss';
 
 import Header from "../../components/Header/Header";
 import {contentPrefix} from "../../js/globals";
+import useTheme from "../../hooks/useTheme";
 // import BackgroundVideo from '/videos/welcome_video.mp4';
 
 export default function WelcomePage() {
+    const {isDarkMode} = useTheme();
+
     return (
-        <section className="welcome-page-container">
+        <section className={`welcome-page-container ${isDarkMode ? 'dark' : 'light'}`}>
             <Header/>
             <div className="welcome-preview-container">
                 <div className="welcome-preview">

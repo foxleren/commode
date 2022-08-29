@@ -17,7 +17,7 @@ body {
   font-size: 62.5%;
   line-height: 1;
   font-family: 'Montserrat', sans-serif;
-  background: #DDDBDB;
+  //background: #DDDBDB;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -82,10 +82,19 @@ textarea {
   box-shadow: none;
 }
 
+//@import 'utitlities/variables';
+//
+//.App {
+//  &.dark {
+//    background-color: var(--background-dark);
+//  }
+//}
+
 
 .app-content {
   max-width: 1500px;
   margin: 0 auto;
+
 }
 
 @font-face {

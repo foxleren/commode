@@ -20,6 +20,10 @@
   /* identical to box height */
 
   letter-spacing: 0.08em;
+  &.dark {
+    color: #fff;
+    border-color: #fff;
+  }
 }
 
 .header-button-change-theme-circle {
@@ -35,6 +39,7 @@
 
   &.dark {
     left: 142px;
+    border-color: #fff;
   }
 }
 

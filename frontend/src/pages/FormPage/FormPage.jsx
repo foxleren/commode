@@ -82,7 +82,7 @@ export default function FormPage() {
                                onChange={handleNameChange}/>
                     </div>
                     <div className="fieldset">
-                        {/*<label style={{color: 'white'}}>+7</label>*/}
+                        <label style={{color: 'white'}}>+7</label>
                         <input id={'phoneNumberInput'} required name={'from_number'}
                                value={toSend.from_number}
                                onChange={handlePhoneChange}

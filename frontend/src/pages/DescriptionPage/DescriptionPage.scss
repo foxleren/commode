@@ -1,19 +1,25 @@
 .description-section {
   background-color: #ED5F5E;
   position: relative;
+
+  transition: all 1.5s;
+
+  &.dark {
+    background-color: #000;
+  }
 }
 
 .description-person-1 {
   position: absolute;
   left: 0;
-  bottom:0;
+  bottom: 0;
   z-index: 1;
 }
 
 .description-person-2 {
   position: absolute;
   right: 0;
-  bottom:0;
+  bottom: 0;
   z-index: 1;
 }
 
@@ -42,37 +48,45 @@
   //}
   span {
     color: #ED6A5E;
-    font-weight:700;
+    font-weight: 700;
 
   }
+
   &.white {
     background-color: #fff;
     color: #000;
   }
+
   &.transparent {
     color: #fff;
     border: 1px solid #FFFFFF;
   }
+
   &.first, &.second {
-   z-index: 0;
+    z-index: 0;
   }
+
   &.third, &.fourth {
     z-index: 3;
   }
+
   &.first {
     top: 27px;
     left: 50%;
     transform: translateX(-50%);
   }
+
   &.second {
     top: 142px;
     right: 173px;
   }
+
   &.third {
     top: 569px;
     left: 50%;
     transform: translateX(-50%);
   }
+
   &.fourth {
     top: 762px;
     right: 173px;
@@ -81,6 +95,7 @@
   &.left {
     border-bottom-left-radius: 0;
   }
+
   &.right {
     border-bottom-right-radius: 0;
   }
