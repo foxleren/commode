@@ -1,0 +1,47 @@
+.preloader-background {
+  position: fixed;
+  background: #000;
+  width: 101vw;
+  height: 100vh;
+  z-index: 1000;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+    z-index: -1;
+    //display: none;
+  }
+}
+
+.preloader-content {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  img {
+    //position: absolute;
+    //left: 50%;
+    //top: 50%;
+    //transform: translate(-50%, -50%);
+  }
+}
+
+.logo-subtext {
+  margin-top: 13px;
+}

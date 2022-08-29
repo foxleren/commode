@@ -1,10 +1,11 @@
 import './DescriptionPage.scss';
+import {contentPrefix} from "../../js/globals";
 
 export default function DescriptionPage() {
     return (<section className="description-section">
-        <img src={'/images/description/description_graffiti.svg'} alt={''}/>
-        <img className="description-person-1" src={'/images/description/description_person_1.svg'} alt={''}/>
-        <img className="description-person-2" src={'/images/description/description_person_2.svg'} alt={''}/>
+        <img src={`${contentPrefix}/images/description/description_graffiti.svg`} alt={''}/>
+        <img className="description-person-1" src={`${contentPrefix}/images/description/description_person_1.svg`} alt={''}/>
+        <img className="description-person-2" src={`${contentPrefix}/images/description/description_person_2.svg`} alt={''}/>
         {/*<div className="description-message-container">*/}
             <div className="description-message first transparent left">где отобедаем, милейший?</div>
             <div className="description-message second white right">в <span>commode</span> — это ресторан в центре

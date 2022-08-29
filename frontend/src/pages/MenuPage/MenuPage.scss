@@ -1,0 +1,51 @@
+#menu {
+  background-image: url(../../../public/images/menu_background.jpg);
+  padding: 57px 10px 51px 53px;
+}
+
+.menu-title {
+  font-family: 'Attack Type', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: 0.12em;
+  margin-bottom: 410px;
+  color: #fff;
+}
+
+.menu-option-container {
+
+}
+
+.menu-option {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.08em;
+  color: #fff;
+  cursor: pointer;
+  width: fit-content;
+
+  &:hover > svg {
+    margin-left: 50px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 51px;
+  }
+
+  &:last-child {
+    color: #ED6A5E;
+    &>svg>path {
+      stroke: #ED6A5E;
+    }
+  }
+
+  svg {
+    margin-left: 32.5px;
+    transition: 0.3s ease-in-out;
+  }
+}

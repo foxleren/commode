@@ -1,0 +1,68 @@
+.header-button-change-theme {
+  //padding: 16.5px 25px 16.5px 7px;
+  //margin-right: 8px;
+  display: flex;
+  align-items: center;
+  //width:fit-content;
+  border: 1px solid #000000;
+  border-radius: 32px;
+  cursor: pointer;
+  position: relative;
+  width: 190px;
+  height: 52px;
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+}
+
+.header-button-change-theme-circle {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  position: absolute;
+  left: 7px;
+  transition: all 0.25s ease-in-out;
+  z-index: 2;
+  //background-color: #fff;
+
+  &.dark {
+    left: 142px;
+  }
+}
+
+.header-button-change-theme-text {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  //margin-left: 16px;
+  //padding-left: 35px;
+  //right: 0;
+  padding: 0 20px;
+  transition: opacity 0.1s ease-in-out;
+
+  &.bar {
+    //padding-right: 35px;
+    //padding-left: 0;
+    float: left;
+  }
+
+  &.restaurant {
+    right: 0;
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,134 @@
+#book {
+  padding: 60px 50px;
+
+}
+
+.book-container {
+  padding: 225px 174px 237px 174px;
+  background: #000000;
+}
+
+.book-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+}
+
+.book-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+
+  input {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 24px;
+    color: #fff;
+    border: 2px solid #FFFFFF;
+    border-radius: 32px;
+    margin-bottom: 32px;
+
+    &.phone {
+      padding-left: 60px;
+    }
+
+    &::placeholder {
+      color: #AAA9A9;
+    }
+
+    &:invalid,
+    &:valid {
+      //border-color: #dc3545;
+      //padding-right: 2.25rem;
+      //background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+      //background-repeat: no-repeat;
+      //background-position: right 0.5625rem center;
+      //background-size: 1.125rem 1.125rem;
+    }
+  }
+
+  button {
+    background: #fff;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.08em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    // gap: 16px;
+
+    // width: 514px;
+    // height: 52px;
+
+    background: #FFFFFF;
+    border-radius: 32px;
+
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.fieldset {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  label {
+    position: absolute;
+    left: 26px;
+    bottom: 41px;
+    transform: translateY(-50%);
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.book-policy-checkbox {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 32px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.02em;
+
+  color: #656565;
+
+  input {
+
+  }
+}
