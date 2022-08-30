@@ -12,24 +12,37 @@ import Preloader from "./components/Preloader/Preloader";
 
 import React from "react";
 import ThemeProvider from "./providers/ThemeProvider";
-import useTheme from "./hooks/useTheme";
 import Layout from "./components/Layout/Layout";
 import usePreloader from "./hooks/usePreloader";
-import {modifyPath} from "./tools/modifyPath";
+import ExtraSliderPage from "./pages/ExtraSliderPage/ExtraSliderPage";
 
 const images1 = [`${contentPrefix}/images/slider/slider_1_lightMode.jpg`, `${contentPrefix}/images/slider/slider_2_lightMode.jpg`, `${contentPrefix}/images/slider/slider_3_lightMode.jpg`,
-`${contentPrefix}/images/slider/slider_4_lightMode.jpg`,`${contentPrefix}/images/slider/slider_5_lightMode.jpg`]
+    `${contentPrefix}/images/slider/slider_4_lightMode.jpg`, `${contentPrefix}/images/slider/slider_5_lightMode.jpg`]
 
 const images2 = [`${contentPrefix}/images/slider/slider_3.jpg`, `${contentPrefix}/images/slider/slider_3.jpg`, `${contentPrefix}/images/slider/slider_3.jpg`,]
 export default function App() {
     const {setIsVisible} = usePreloader();
 
-    window.addEventListener('load', (event) => {
+    const hidePreloader = (func) => {
         setTimeout(() => {
             setIsVisible(false);
         }, 1000);
-    });
+    }
 
+    // document.onload = () => {
+    //
+    //     hidePreloader();
+    // }
+    //
+    // document.addEventListener('DOMContentLoaded', function(){
+    //     console.log("doc is ready");
+    //
+    // })
+
+   // window.addEventListener("load", function () {
+        //alert("is loaded");
+        //hidePreloader();
+  //  });
 
 
     return (<ThemeProvider>
@@ -43,8 +56,8 @@ export default function App() {
                         <MenuPage/>
                         <SchedulePage/>
                         <FormPage/>
-                        {/*<ExtraSliderPage/>*/}
-                        <Slider images={images2} toggleStyle={'round'}/>
+                        <ExtraSliderPage/>
+                        {/*<Slider images={images2} toggleStyle={'round'}/>*/}
                         <Map/>
                         <Footer/>
                     </div>

@@ -6,6 +6,14 @@ import PreloaderProvider from "./providers/PreloaderProvider";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+
+
+// const hidePreloader = () => {
+//     setTimeout(() => {
+//         setIsVisible(false);
+//     }, 1000);
+// }
+
 root.render(
   <React.StrictMode>
       <PreloaderProvider>

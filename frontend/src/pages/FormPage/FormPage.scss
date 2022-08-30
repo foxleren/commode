@@ -44,20 +44,32 @@
       background-color: #000;
       color: #fff;
     }
+
     .book-right-text {
       color: #000;
     }
-    .book-hand-top, .book-hand-bottom  {
+
+    .book-hand-top, .book-hand-bottom {
       display: none;
     }
+
     .book-policy-checkbox .fake-checkbox::before {
       border-color: #000;
     }
+
     .book-policy-checkbox .custom-checkbox:checked + label::before {
       fill: black !important;
     }
-    .custom-checkbox:checked+label::before {
-     color: #000;
+
+    .custom-checkbox:checked + label::before {
+      color: #000;
+    }
+
+    .incorrect-phone {
+      color: #000;
+    }
+    .fieldset label {
+     // color: #000;
     }
   }
 }
@@ -98,7 +110,11 @@
     color: #fff;
     border: 2px solid #FFFFFF;
     border-radius: 32px;
-    margin-bottom: 32px;
+
+    &:first-child {
+      margin-bottom: 32px;
+    }
+
     //padding-left: 65px;
     &#phoneNumberInput {
       padding-left: 60px;
@@ -159,7 +175,7 @@
   label {
     position: absolute;
     left: 26px;
-    bottom: 41px;
+    bottom: 8px;
     transform: translateY(-50%);
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -176,6 +192,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  //margin-top: 32px;
   margin-bottom: 32px;
   /* identical to box height, or 150% */
 
@@ -190,12 +207,14 @@
     z-index: -1;
     opacity: 0;
   }
+
   .fake-checkbox {
     display: inline-flex;
     align-items: center;
     user-select: none;
     cursor: pointer;
   }
+
   .fake-checkbox::before {
     content: '';
     display: inline-block;
@@ -212,7 +231,8 @@
     line-height: 15px;
     padding: 4px;
   }
-  .custom-checkbox:checked+label::before {
+
+  .custom-checkbox:checked + label::before {
     content: "\2713";
   }
 
@@ -240,4 +260,23 @@
 
   letter-spacing: 0.08em;
   padding-bottom: 30px;
+}
+
+.incorrect-phone {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  //line-height: 32px;
+
+  letter-spacing: 0.08em;
+
+  padding: 15px 0 20px 20px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &.visible {
+    opacity: 1;
+  }
 }

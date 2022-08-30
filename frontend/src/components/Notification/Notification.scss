@@ -1,0 +1,45 @@
+.notification-container {
+  padding: 32px 40px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  z-index: 5;
+  border-radius: 56px 56px 0px 56px;
+  max-width: 400px;
+  box-shadow: 2px 6px 16px rgba(0, 0, 0, 0.25);
+  transform: translateX(800px);
+  transition: transform 0.3s ease-in-out;
+  &.visible {
+    transform: translateX(0);
+  }
+}
+
+.notification-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+}
+
+.notification-button {
+  padding: 16px 40px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+
+  color: #fff;
+  background-color: #000;
+  border-radius: 32px;
+  text-align: center;
+  margin-top: 32px;
+  cursor: pointer;
+}

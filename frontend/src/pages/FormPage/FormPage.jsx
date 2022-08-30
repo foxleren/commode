@@ -3,6 +3,7 @@ import React from 'react';
 import axios from "axios";
 import useTheme from "../../hooks/useTheme";
 import {contentPrefix} from "../../js/globals";
+import Notification from "../../components/Notification/Notification";
 
 
 export default function FormPage() {
@@ -12,38 +13,37 @@ export default function FormPage() {
 
     const {isDarkMode} = useTheme();
 
+    const [isFormCompleted, setIsFormCompleted] = React.useState(false);
+    const [isInputCorrect, setIsInputCorrect] = React.useState(true);
 
     const [toSend, setToSend] = React.useState({
         from_name: '', from_number: ''
     });
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
-        //console.log(toSend)
-        const clearPhoneNumber = `8${toSend.from_number.replace(/[^+\d]/g, '')}`;
-        // send(
-        //     'service_ieaqz9h',
-        //     'template_drju7my',
-        //     {from_name: toSend.from_name, from_number: clearPhoneNumber},
-        //     'O_qgr_rXZ3yVvEHkI'
-        // ).then(
-        //     (response) => {
-        //         console.log('Успешное бронирование', response.status, response.text);
-        //     }
-        // ).catch((err) => {
-        //     console.log('Failed...', err);
-        // })
-        try {
-            const request = await axios.post('http://localhost:8080/emails', {
-                name: toSend.from_name,
-                phoneNumber: clearPhoneNumber
-            });
-        } catch (err) {
-            alert('Не удалось отправить форму');
-            console.error(err);
+    const isPhoneCorrect = (phoneNumber) => {
+        if (phoneNumber.length !== 11) {
+           // alert('Please change number');
+            setIsInputCorrect(false);
+            return false;
         }
-
+        setIsInputCorrect(true);
+        return true;
     }
+
+    const completeForm = async (e) => {
+        e.preventDefault();
+        const phoneNumber = `8${toSend.from_number.replace(/[^+\d]/g, '')}`;
+        if (isPhoneCorrect(phoneNumber)) {
+            axios.post('http://localhost:8080/emails', {
+                name: toSend.from_name,
+                phoneNumber: phoneNumber
+            }).then(() => {
+                //console.log('successful request');
+                setIsFormCompleted(true);
+            }).catch((err) => console.log(err));
+        }
+    }
+
     const handleNameChange = (e) => {
         setToSend({...toSend, [e.target.name]: e.target.value});
     }
@@ -69,15 +69,15 @@ export default function FormPage() {
     }
 
     return (<section id="book">
-
         <div className={`book-container ${isDarkMode ? 'dark' : 'light'}`}>
             <img className="book-hand-top" src={`${contentPrefix}/images/form/form_hand_top.svg`} alt={''}/>
             <img className="book-hand-bottom" src={`${contentPrefix}/images/form/form_hand_bottom.svg`} alt={''}/>
             <div className="book-left">
                 <div className="book-title">ЗАБРОНИРОВАТЬ СТОЛИК</div>
-                <form className="book-form-container" onSubmit={onSubmit}>
+                <form className="book-form-container" onSubmit={completeForm}>
                     <div className="fieldset">
-                        <input name={'from_name'} placeholder={'Имя (не обязательно)'} value={toSend.from_name}
+                        <input name={'from_name'} type={'text'} placeholder={'Имя (не обязательно)'}
+                               value={toSend.from_name}
                                onChange={handleNameChange}/>
                     </div>
                     <div className="fieldset">
@@ -86,17 +86,21 @@ export default function FormPage() {
                                value={toSend.from_number}
                                onChange={handlePhoneChange}
                                placeholder={'(999) 999-99-99'}
+                               minLength={5}
                                type="tel"/>
+
                     </div>
+                    <span
+                        className={`incorrect-phone ${isInputCorrect ? 'hidden' : 'visible'}`}>Введите номер полностью</span>
                     <div className="book-policy-checkbox">
                         <input id="policy-checkbox" className={'custom-checkbox'} required type="checkbox"/>
                         <label className="fake-checkbox" htmlFor="policy-checkbox"/>
-                        Я ознакомлен(а) с &nbsp;<a href={`${contentPrefix}/pdf/pdf_example.pdf`} download={'Политика конфиденциальности.pdf'}>политикой конфиденциальности</a>
+                        Я ознакомлен(а) с &nbsp;<a href={`${contentPrefix}/pdf/pdf_example.pdf`}
+                                                   download={'Политика конфиденциальности.pdf'}>политикой
+                        конфиденциальности</a>
                     </div>
                     <button type='submit'>ЗАБРОНИРОВАТЬ</button>
                 </form>
-
-
             </div>
             <div className="book-right">
                 <div className="book-right-text">
@@ -110,7 +114,7 @@ export default function FormPage() {
                 </div>
             </div>
         </div>
-
-
+        <Notification content={'Скоро мы с Вами свяжемся'} buttonContent={'Понятно'} isVisible={isFormCompleted}
+                      action={() => setIsFormCompleted(false)}/>}
     </section>);
 }

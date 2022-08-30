@@ -1,7 +1,6 @@
 import './DescriptionPage.scss';
 import {contentPrefix} from "../../js/globals";
 import useTheme from "../../hooks/useTheme";
-import {Fade} from "react-awesome-reveal";
 
 export default function DescriptionPage() {
     const {isDarkMode} = useTheme();

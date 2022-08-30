@@ -21,7 +21,7 @@ export default function Preloader() {
     // console.log(isV)
 
     return (
-        <div className={`preloader-background ${isVisible ? 'visible' : 'hidden'}`}>
+        <div id="preloader" className={`preloader-background ${isVisible ? 'visible' : 'hidden'}`}>
             <div className="preloader-content">
                 <img src={`${contentPrefix}/images/welcome_logo.svg`} alt={''}/>
                 <div className="logo-subtext">{isDarkMode ? 'бар' : 'ресторан'}</div>
