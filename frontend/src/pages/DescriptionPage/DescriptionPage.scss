@@ -2,11 +2,22 @@
   background-color: #ED5F5E;
   position: relative;
 
-  transition: all 1.5s;
+  transition: all 0.3s ease-in-out;
 
   &.dark {
     background-color: #000;
+    .description-graffiti {
+      background-image: url(../../../public/images/description/description_graffiti_darkMode.svg);
+    }
   }
+}
+
+.description-graffiti {
+  background: url(../../../public/images/description/description_graffiti_lightMode.svg) no-repeat left bottom;
+  width: 6307px;
+  height: 931px;
+  transition: 0.3s ease-in-out;
+  //float: left;
 }
 
 .description-person-1 {

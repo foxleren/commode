@@ -10,7 +10,7 @@
   position: relative;
   width: 190px;
   height: 52px;
-  z-index: 3;
+  z-index: 2;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -20,9 +20,21 @@
   /* identical to box height */
 
   letter-spacing: 0.08em;
+  color: #fff;
+  background-color: #000;
+
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
   &.dark {
-    color: #fff;
+    color: #000;
     border-color: #fff;
+    background-color: #fff;
+    .header-button-change-theme-circle {
+      left: 142px;
+      //border-color: #fff;
+      border-color: #000;
+      background-color: #000;
+    }
   }
 }
 
@@ -33,14 +45,17 @@
   border-radius: 100px;
   position: absolute;
   left: 7px;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 2;
   //background-color: #fff;
-
-  &.dark {
-    left: 142px;
-    border-color: #fff;
-  }
+  background-color: #fff;
+  //transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  //&.dark {
+  //  left: 142px;
+  //  //border-color: #fff;
+  //  border-color: #000;
+  //  background-color: #000;
+  //}
 }
 
 .header-button-change-theme-text {

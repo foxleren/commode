@@ -1,14 +1,8 @@
 import './FormPage.scss';
 import React from 'react';
-import {send} from "emailjs-com";
 import axios from "axios";
-
-const config = {
-    headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
-    }
-};
+import useTheme from "../../hooks/useTheme";
+import {contentPrefix} from "../../js/globals";
 
 
 export default function FormPage() {
@@ -16,7 +10,7 @@ export default function FormPage() {
     // const [nameInput, setNameInput] = React.useState('');
     // const [telInput, setTelInput] = React.useState('');
 
-
+    const {isDarkMode} = useTheme();
 
 
     const [toSend, setToSend] = React.useState({
@@ -40,11 +34,13 @@ export default function FormPage() {
         //     console.log('Failed...', err);
         // })
         try {
-            const request = await axios.post('http://localhost:8080/emails',  {name: toSend.from_name, phoneNumber: clearPhoneNumber}, config);
-        }
-        catch (err) {
-                alert('Не удалось отправить форму');
-                console.error(err);
+            const request = await axios.post('http://localhost:8080/emails', {
+                name: toSend.from_name,
+                phoneNumber: clearPhoneNumber
+            });
+        } catch (err) {
+            alert('Не удалось отправить форму');
+            console.error(err);
         }
 
     }
@@ -73,7 +69,10 @@ export default function FormPage() {
     }
 
     return (<section id="book">
-        <div className="book-container">
+
+        <div className={`book-container ${isDarkMode ? 'dark' : 'light'}`}>
+            <img className="book-hand-top" src={`${contentPrefix}/images/form/form_hand_top.svg`} alt={''}/>
+            <img className="book-hand-bottom" src={`${contentPrefix}/images/form/form_hand_bottom.svg`} alt={''}/>
             <div className="book-left">
                 <div className="book-title">ЗАБРОНИРОВАТЬ СТОЛИК</div>
                 <form className="book-form-container" onSubmit={onSubmit}>
@@ -82,23 +81,33 @@ export default function FormPage() {
                                onChange={handleNameChange}/>
                     </div>
                     <div className="fieldset">
-                        <label style={{color: 'white'}}>+7</label>
+                        <label>+7</label>
                         <input id={'phoneNumberInput'} required name={'from_number'}
                                value={toSend.from_number}
                                onChange={handlePhoneChange}
                                placeholder={'(999) 999-99-99'}
                                type="tel"/>
                     </div>
+                    <div className="book-policy-checkbox">
+                        <input id="policy-checkbox" className={'custom-checkbox'} required type="checkbox"/>
+                        <label className="fake-checkbox" htmlFor="policy-checkbox"/>
+                        Я ознакомлен(а) с &nbsp;<a href={`${contentPrefix}/pdf/pdf_example.pdf`} download={'Политика конфиденциальности.pdf'}>политикой конфиденциальности</a>
+                    </div>
                     <button type='submit'>ЗАБРОНИРОВАТЬ</button>
                 </form>
-                <div className="book-policy-checkbox">
-                    <input required type="checkbox"/>
-                    Я ознакомлен(а) с политикой конфиденциальности
-                </div>
+
 
             </div>
             <div className="book-right">
-
+                <div className="book-right-text">
+                    Летняя терасса работает <br/>
+                </div>
+                <div className="book-right-text">
+                    с 12:00 до 00:00 <br/>
+                </div>
+                <div className="book-right-text">
+                    по стандартному прайсу, <br/>без платы за время
+                </div>
             </div>
         </div>
 

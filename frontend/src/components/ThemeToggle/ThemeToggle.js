@@ -9,7 +9,7 @@ export default function ThemeToggle() {
     const {isVisible, setIsVisible} = usePreloader();
 
     const changeTheme = () => {
-        setIsVisible(true);
+        //setIsVisible(true);
         // setTimeout(() => {
         //     setIsVisible(!isVisible);
         // }, 1000);
@@ -23,7 +23,7 @@ export default function ThemeToggle() {
         <div className={`header-button-change-theme ${isDarkMode ? 'dark' : 'light'}`}
              onClick={changeTheme}>
             <div className={`header-button-change-theme-circle ${isDarkMode ? 'dark' : 'light'}`}/>
-            <div className={`header-button-change-theme-text bar ${isDarkMode ? 'visible' : 'hidden'}`}>Бар</div>
+            <div className={`header-button-change-theme-text bar ${isDarkMode ? 'visible' : 'hidden'}`}>Клуб</div>
             <div
                 className={`header-button-change-theme-text restaurant ${isDarkMode ? 'hidden' : 'visible'}`}>Ресторан
             </div>

@@ -1,5 +1,6 @@
 const deployUrl = '.'
 const localUrl = 'commode'
 
-export const contentPrefix = localUrl;
+export const contentPrefix = deployUrl;
 export let theme = 'dark';
+

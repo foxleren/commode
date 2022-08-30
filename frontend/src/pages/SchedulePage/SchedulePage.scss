@@ -1,10 +1,27 @@
-#schedule {
+.schedule {
   padding: 112px 47px 0px 72px;
   position: relative;
   min-height: 600px;
   overflow: hidden;
   //max-width: 1100px;
+  &.dark {
+    .schedule-days {
+      color: #fff;
+    }
+
+    .schedule-days-subtext .schedule-underline {
+      border-color: #fff;
+    }
+
+    .header-button-change-theme-circle, .header-button-change-theme {
+      border-color: #000;
+    }
+    .header-button-change-theme-text {
+      color: #000;
+    }
+  }
 }
+
 
 .schedule-days {
   display: flex;
@@ -12,7 +29,7 @@
   flex-direction: column;
   max-width: 1100px;
   margin-bottom: 40px;
-
+  transition: color 0.3s ease-in-out;
 }
 
 .schedule-days-item {
@@ -83,6 +100,7 @@
     height: 36px;
     border: 1px solid #000000;
     border-top: none;
+    transition: broder-color 0.3s ease-in-out;
   }
 }
 
@@ -146,6 +164,17 @@
 
   &.second {
     margin-bottom: 104px;
+
+    & > .header-button-change-theme, .header-button-change-theme.dark {
+      background-color: transparent;
+      border-color: #000;
+      color: #000;
+
+      & > .header-button-change-theme-circle {
+        background-color: transparent;
+        border-color: #000;
+      }
+    }
   }
 }
 

@@ -1,10 +1,13 @@
 import './SchedulePage.scss';
 import {contentPrefix} from "../../js/globals";
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
+import useTheme from "../../hooks/useTheme";
 
 export default function SchedulePage() {
+    const {isDarkMode} = useTheme();
+
     return (
-        <section id="schedule">
+        <section id="schedule" className={`schedule ${isDarkMode ? 'dark' : 'light'}`}>
             <div className="schedule-days">
                 <div className="schedule-days-container outer">
                     <div className="schedule-days-item">ПН</div>

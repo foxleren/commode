@@ -3,6 +3,7 @@ import './WelcomePage.scss';
 import Header from "../../components/Header/Header";
 import {contentPrefix} from "../../js/globals";
 import useTheme from "../../hooks/useTheme";
+import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 // import BackgroundVideo from '/videos/welcome_video.mp4';
 
 export default function WelcomePage() {
@@ -18,8 +19,9 @@ export default function WelcomePage() {
                     </video>
                 </div>
                 <div className="welcome-preview-text">
+                    <ThemeToggle/>
                     <img src={`${contentPrefix}/images/welcome_logo.svg`} alt={''}/>
-                    <div>меню по собестоимости</div>
+                    <div className="welcome-preview-subtext">меню по собестоимости</div>
                 </div>
             </div>
             <div className="welcome-bottom-container">

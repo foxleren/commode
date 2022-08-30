@@ -2,9 +2,13 @@ import './Slider.scss';
 import React from 'react';
 import SliderToggle from "./SliderToggle";
 import SliderImage from "./SliderImage";
+import useTheme from "../../hooks/useTheme";
+import usePreloader from "../../hooks/usePreloader";
+import {modifyPath} from "../../tools/modifyPath";
 
 
 export default function Slider({images = [''], showToggler = true, toggleStyle= 'round', autoPlayTime = 3000}) {
+
     const [currentSlide, setCurrentSlide] = React.useState(0);
 
     function changeSlide(actualSlide = currentSlide + 1) {
@@ -19,6 +23,7 @@ export default function Slider({images = [''], showToggler = true, toggleStyle= 
 
         return () => clearTimeout(timer);
     }, [currentSlide]);
+
 
     return (<div className="slider-container">
         <div className="slider-item">
