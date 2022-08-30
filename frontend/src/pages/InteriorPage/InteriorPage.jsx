@@ -12,7 +12,7 @@ const content = {
 export default function InteriorPage() {
     const {isDarkMode} = useTheme();
 
-    return (<section id="interior">
+    return (<section id="interior" className={`interior ${isDarkMode ? 'dark' : 'light'}`}>
         <div className="interior-title">ИНТЕРЬЕР</div>
         <Slider images={isDarkMode ? content.club : content.restaurant} toggleStyle={'round'}/>
     </section>);

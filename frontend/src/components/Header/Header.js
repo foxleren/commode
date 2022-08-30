@@ -22,15 +22,30 @@ export default function Header() {
     return (<header id={'header'} className={`${isDarkMode ? 'dark' : 'light'}`}>
         <div className="header-container">
             <div className="header-links-container">
-                <div className="header-link">КОНЦЕПЦИЯ</div>
-                <div className="header-link">МЕНЮ</div>
-                <div className="header-link">ПОСАДКА</div>
-                <div className="header-link">АРЕНДА ЗАЛА</div>
-                <div className="header-link">КОНТАКТЫ</div>
+                <Link to={'dialog'} smooth spy duration={500} offset={-116}>
+                    <div className="header-link">КОНЦЕПЦИЯ</div>
+                </Link>
+                <Link to={'menu'} smooth spy duration={500} offset={-116}>
+                    <div className="header-link">МЕНЮ</div>
+                </Link>
+                <Link to={'interior'} smooth spy duration={500} offset={-116}>
+                    <div className="header-link">ПОСАДКА</div>
+                </Link>
+                <Link to={'book'} smooth spy duration={500} offset={-115}>
+                    <div className="header-link">АРЕНДА ЗАЛА</div>
+                </Link>
+                <Link to={'footer'} smooth spy duration={500}>
+                    <div className="header-link">КОНТАКТЫ</div>
+                </Link>
+
+
+
+
+
             </div>
             <div className="header-buttons-container">
                 <ThemeToggle/>
-                <Link to={'book'} smooth spy duration={500}>
+                <Link to={'book'} smooth spy duration={500} offset={-115}>
                     <div className={`header-button-book ${isDarkMode ? 'dark' : 'light'}`}>Забронировать</div>
                 </Link>
 

@@ -1,5 +1,21 @@
 #interior {
   padding: 60px 48px 60px 48px;
+
+  img {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    max-height: 700px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.interior {
+  &.dark {
+    .interior-title {
+      color: #fff;
+    }
+  }
 }
 
 .interior-title {
@@ -10,4 +26,6 @@
   line-height: 64px;
   letter-spacing: 0.12em;
   margin-bottom: 43px;
+
+  transition: color 0.3s ease-in-out;
 }

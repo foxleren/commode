@@ -57,7 +57,6 @@ export default function App() {
                         <SchedulePage/>
                         <FormPage/>
                         <ExtraSliderPage/>
-                        {/*<Slider images={images2} toggleStyle={'round'}/>*/}
                         <Map/>
                         <Footer/>
                     </div>

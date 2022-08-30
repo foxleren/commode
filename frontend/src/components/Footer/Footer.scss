@@ -1,0 +1,33 @@
+footer {
+  padding: 52px 62px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+}
+
+.footer-logo {
+  width: 195px;
+  height: 47px;
+}
+
+.footer-bottom {
+  margin-top: 51px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-documents {
+  display:flex;
+  flex-direction: column;
+}
+
+.footer-documents-item {
+  margin-bottom: 30px;
+}
