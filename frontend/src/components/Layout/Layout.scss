@@ -1,6 +1,7 @@
 .layout {
-  background-color: #F3F3F3;
+  //background-color: #F3F3F3;
   //background-color: #fff;
+  background-color: #000;
   overflow: hidden;
   transition: background-color 0.3s ease-in-out;
 
@@ -8,7 +9,7 @@
     background-color: #000;
   }
 
-  &.rent {
+  &.rent, &.home {
     background-color: #000;
   }
 }

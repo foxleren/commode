@@ -134,6 +134,6 @@ export default function FormPage({page}) {
             </div>
         </div>
         <Notification content={'Скоро мы с Вами свяжемся'} buttonContent={'Понятно'} isVisible={isFormCompleted}
-                      action={() => setIsFormCompleted(false)}/>}
+                      action={() => setIsFormCompleted(false)}/>
     </section>);
 }

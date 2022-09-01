@@ -20,7 +20,7 @@ header {
   z-index: 5;
 
   //tra
-  color: #000;
+  color: #fff;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.5s ease-in-out;
   //transition: all 5s ease-in-out;
   //transition: background 1s ease-in-out;
@@ -28,8 +28,38 @@ header {
   &.relative {
     position: relative;
   }
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .header-container {
+      padding: 0 52px;
+    }
+  }
+
+  &.fixed {
+    background-color: #000;
+    //max-width: ;
+    max-width: 1500px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -300px);
+
+    .header-container {
+      padding: 0 52px;
+    }
+  }
+
   &.rent {
     color: #fff !important;
+    //padding: 30px 0;
+    .header-container {
+      //padding: 0 52px;
+    }
+
     .header-link:hover:before {
       background: #fff !important;
     }
@@ -43,22 +73,25 @@ header {
       background: #fff;
     }
   }
+
   &.light {
-    color: #000;
+    color: #fff;
+
     .header-link:hover:before {
-      background: #000;
+      background: #fff;
     }
   }
 
-  //&.visible {
-  //  //position: fixed;
-  //  transform: translateY(0);
-  //}
-  //
-  //&.hidden {
-  // // position: relative;
-  //  transform: translateY(-300px);
-  //}
+  &.visible {
+    //position: fixed;
+    transform: translate(-50%, 0);
+  }
+
+  &.hidden {
+    // position: relative;
+    //transform: translateY(-300px);
+  }
+
   .button.book {
     margin-left: 8px;
   }

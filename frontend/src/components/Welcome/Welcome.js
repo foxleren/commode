@@ -11,9 +11,7 @@ export default function Welcome({page = 'home'}) {
     if (page === 'home') {
         return (
             <div className={`welcome-container ${page} ${isDarkMode ? 'dark' : 'light'}`}>
-
-
-                <Header position={headerPosition} page={page}/>
+                <Header position={'absolute'} page={page}/>
                 {/*<div className="intro">*/}
                 {/*    <div className="video">*/}
                 {/*        <video className={'video_media'} autoPlay loop muted*/}
@@ -29,14 +27,14 @@ export default function Welcome({page = 'home'}) {
                         </video>
                     </div>
                     <div className="welcome-preview-text">
-                        <ThemeToggle/>
+                        {/*<ThemeToggle/>*/}
                         <div className="welcome-logo"/>
                         <div className="welcome-preview-subtext">меню по собестоимости</div>
                     </div>
                 </div>
                 <div className="welcome-bottom-container">
                     <div className="welcome-bottom-tag">ИСТОРИЯ & СОВРЕМЕННОСТЬ<br/>РОСКОШЬ & ДОСТУПНОСТЬ</div>
-                    <div className="welcome-bottom-address">НЕВСКИЙ ПРОСПЕКТ, 47</div>
+                    <AddressSpan/>
                 </div>
             </div>
         );

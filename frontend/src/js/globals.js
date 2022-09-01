@@ -3,8 +3,8 @@ const urls = {
     localUrl: 'commode'
 }
 
-// export const contentPrefix = urls.localUrl;
-export const contentPrefix = urls.deployUrl;
+export const contentPrefix = urls.localUrl;
+//export const contentPrefix = urls.deployUrl;
 export let theme = 'dark';
 
 // window.onload = () => {

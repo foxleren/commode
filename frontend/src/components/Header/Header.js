@@ -5,33 +5,12 @@ import useTheme from "../../hooks/useTheme";
 import {Link} from "react-scroll";
 import {Link as RouterLink} from "react-router-dom";
 import Button from "../Button/Button";
-import usePreloader from "../../hooks/usePreloader";
 
-export default function Header({page = 'home', position = 'fixed'}) {
+export default function Header({page = 'home', position = 'fixed', isVisible}) {
     const {isDarkMode} = useTheme();
-    const {showPreloader} = usePreloader();
-    // const [isHeaderVisible, setIsHeaderVisible] = useState(false);
-    //
-    //  window.onscroll = () => {
-    //      console.log("scroll scrolling")
-    //      let secondSection = window.document.getElementById('dialog').offsetTop;
-    //
-    //      let scrolled = window.pageYOffset;
-    //
-    //
-    //      if (scrolled > secondSection) {
-    //          setIsHeaderVisible(true);
-    //      }
-    //  }
-    // const history = useHistory();
-    //
-    // const delayRedirect = (e, path) => {
-    //     e.preventDefault();
-    //     showPreloader();
-    //     setTimeout(() => history.push(path), 300);
-    // }
 
-    return (<header id={'header'} className={`header ${position} ${page} ${isDarkMode ? 'dark' : 'light'} `}>
+    return (<header id={'header'}
+                    className={`header ${position} ${page} ${isDarkMode ? 'dark' : 'light'} ${isVisible ? 'visible' : 'hidden'}`}>
         <div className="header-container">
             {page === 'home' && <div className="header-links-container">
                 <Link to={'dialog'} smooth spy duration={500}>
@@ -56,9 +35,9 @@ export default function Header({page = 'home', position = 'fixed'}) {
                 </RouterLink>
             </div>}
             {page === 'home' && <div className="header-buttons-container">
-                <ThemeToggle/>
+                {position === 'fixed' && <ThemeToggle/>}
                 <Link to={'book'} smooth spy duration={500}>
-                    <Button content={'Забронировать'} type={'book'} color={'black'}
+                    <Button content={'Забронировать'} type={'book'} color={'white'}
                             mode={isDarkMode ? 'dark' : 'light'}/>
                     {/*<div className={`header-button-book ${isDarkMode ? 'dark' : 'light'}`}>Забронировать</div>*/}
                 </Link></div>}

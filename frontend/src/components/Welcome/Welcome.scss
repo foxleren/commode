@@ -1,8 +1,9 @@
 .welcome-container {
   position: relative;
-  padding: 0 52px;
+
 
   &.rent {
+    padding: 0 52px;
     background: url(../../../public/images/welcome_rent.jpg) no-repeat;
     //background-size: 100% 100%;
     min-height: 960px;

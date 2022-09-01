@@ -12,8 +12,9 @@ export default function Preloader() {
     return (
         <div id="preloader" className={`preloader-background ${isVisible ? 'visible' : 'hidden'} ${isDarkMode ? 'dark' : 'light'}`}>
             <div className="preloader-content">
-                {isDarkMode && <img src={`${contentPrefix}/images/welcome_logo.svg`} alt={''}/>}
-                {!isDarkMode && <img src={`${contentPrefix}/images/commode_logo_black.svg`} alt={''}/>}
+                <img src={`${contentPrefix}/images/welcome_logo.svg`} alt={''}/>
+                {/*{isDarkMode && <img src={`${contentPrefix}/images/welcome_logo.svg`} alt={''}/>}*/}
+                {/*{!isDarkMode && <img src={`${contentPrefix}/images/commode_logo_black.svg`} alt={''}/>}*/}
                 {/*<div className="logo-subtext">{isDarkMode ? 'бар' : 'ресторан'}</div>*/}
             </div>
         </div>

@@ -32,7 +32,7 @@
 
 .welcome-preview {
   width: 100%;
-
+  filter: opacity(80%);
   //max-width: 1400px;
   //max-height: 600px;
   background-color: black;
@@ -40,8 +40,8 @@
   video {
     width: 100%;
     height: 100%;
-    max-width: 1400px;
-    max-height: 785px;
+    //max-width: 1400px;
+    //max-height: 785px;
     object-fit: cover;
   }
 }
@@ -100,7 +100,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 64px 0 70px 0;
+  padding: 64px 52px 70px 52px;
 }
 
 .welcome-bottom-tag {
@@ -110,6 +110,7 @@
   font-size: 24px;
   line-height: 29px;
   transition: 0.3s ease-in-out;
+  color: #fff;
 }
 
 .welcome-bottom-address {

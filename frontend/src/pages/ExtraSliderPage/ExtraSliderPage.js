@@ -12,6 +12,7 @@ export default function ExtraSliderPage() {
     const {isDarkMode} = useTheme();
 
     return (
-        <Slider images={isDarkMode ? content.club : content.restaurant} toggleStyle={'round'}/>
-    );
+        <section className="extra-slider">
+            <Slider images={isDarkMode ? content.club : content.restaurant} toggleStyle={'round'}/>
+        </section>);
 }

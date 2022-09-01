@@ -11,7 +11,10 @@
 }
 
 .interior {
+  background-color: #f3f3f3;
+  transition: background-color 0.3s ease-in-out;
   &.dark {
+    background-color: #000;
     .interior-title {
       color: #fff;
     }
