@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/commode/static/css/main.d00f462a.css",
-    "main.js": "/commode/static/js/main.60401b47.js",
+    "main.css": "/commode/static/css/main.8337f74f.css",
+    "main.js": "/commode/static/js/main.e779c839.js",
     "static/media/menu_background_lightMode.jpg": "/commode/static/media/menu_background_lightMode.e61afff31155a2cd676d.jpg",
     "static/media/welcome_rent.jpg": "/commode/static/media/welcome_rent.7a93a02c1595fc60e12e.jpg",
     "static/media/menu_background_darkMode.jpg": "/commode/static/media/menu_background_darkMode.680a7127b367b59d57c2.jpg",
@@ -15,11 +15,11 @@
     "index.html": "/commode/index.html",
     "static/media/toggle_left.svg": "/commode/static/media/toggle_left.aa7f802dac72ecfb7688.svg",
     "static/media/toggle_right.svg": "/commode/static/media/toggle_right.1a00ff9e267bbad787c8.svg",
-    "main.d00f462a.css.map": "/commode/static/css/main.d00f462a.css.map",
-    "main.60401b47.js.map": "/commode/static/js/main.60401b47.js.map"
+    "main.8337f74f.css.map": "/commode/static/css/main.8337f74f.css.map",
+    "main.e779c839.js.map": "/commode/static/js/main.e779c839.js.map"
   },
   "entrypoints": [
-    "static/css/main.d00f462a.css",
-    "static/js/main.60401b47.js"
+    "static/css/main.8337f74f.css",
+    "static/js/main.e779c839.js"
   ]
 }
