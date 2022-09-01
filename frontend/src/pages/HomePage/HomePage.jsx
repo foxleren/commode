@@ -42,7 +42,7 @@ export default function HomePage() {
     }
 
     return (<div className={`home-page ${isDarkMode ? 'dark' : 'light'}`}>
-        <Header page={'home'} position={'fixed'} isVisible={isHeaderVisible}/>
+        {/*<Header page={'home'} position={'fixed'} isVisible={isHeaderVisible}/>*/}
         <Welcome page={'home'}/>
         <DescriptionPage/>
         <InteriorPage/>

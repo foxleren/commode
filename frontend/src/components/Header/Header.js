@@ -5,6 +5,7 @@ import useTheme from "../../hooks/useTheme";
 import {Link} from "react-scroll";
 import {Link as RouterLink} from "react-router-dom";
 import Button from "../Button/Button";
+import { HashLink } from 'react-router-hash-link';
 
 export default function Header({page = 'home', position = 'fixed', isVisible}) {
     const {isDarkMode} = useTheme();

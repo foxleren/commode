@@ -28,8 +28,8 @@ export default function App() {
     return (
         <ThemeProvider>
             <div className="App"><Preloader/>
-                <BrowserRouter basename={process.env.PUBLIC_URL} >
-                {/*<BrowserRouter>*/}
+                {/*<BrowserRouter basename={process.env.PUBLIC_URL} >*/}
+                <BrowserRouter>
                     <Layout>
                         <div className={`app-content`}>
                             <Routes>
