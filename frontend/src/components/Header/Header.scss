@@ -15,22 +15,38 @@ header {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.08em;
-  background-color: #DDDBDB;
+  background-color: transparent;
   position: fixed;
   z-index: 5;
 
   //tra
-
+  color: #000;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.5s ease-in-out;
   //transition: all 5s ease-in-out;
   //transition: background 1s ease-in-out;
   //transition: color 1s ease-in-out;
+  &.relative {
+    position: relative;
+  }
+  &.rent {
+    color: #fff !important;
+    .header-link:hover:before {
+      background: #fff !important;
+    }
+  }
+
   &.dark {
-    background-color: #000;
+    //background-color: #000;
     color: #fff;
 
     .header-link:hover:before {
       background: #fff;
+    }
+  }
+  &.light {
+    color: #000;
+    .header-link:hover:before {
+      background: #000;
     }
   }
 
@@ -43,6 +59,9 @@ header {
   // // position: relative;
   //  transform: translateY(-300px);
   //}
+  .button.book {
+    margin-left: 8px;
+  }
 }
 
 .header-container {
@@ -60,25 +79,36 @@ header {
   position: relative;
 }
 
+.header-link-active {
+  .header-link:before {
+    width: 100%;
+    background: #fff;
+    transition: width .35s ease;
+  }
+}
+
 .header-link {
   margin: 0 20px;
   position: relative;
   cursor: pointer;
+  text-transform: uppercase;
+
   &:before {
     content: '';
     display: block;
     position: absolute;
-   // color: #000;
+    // color: #000;
     left: 0;
-    bottom: -3px;
-    height: 1px;
+    bottom: -4px;
+    height: 1.5px;
     width: 0;
     transition: width 0.3s ease-in-out, background .3s ease-in-out;
   }
+
   &:hover:before {
     width: 100%;
-    background: #000;
-    transition: width .35s ease;
+    background: #fff;
+    transition: width .3s ease-in-out;
   }
 
   &:first-child {
@@ -102,10 +132,12 @@ header {
   border-radius: 32px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
+
   &.dark {
     background-color: #fff;
     color: #000;
   }
+
   &:hover {
     background-color: #fff;
     color: #000;

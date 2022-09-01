@@ -1,7 +1,18 @@
 .layout {
-  background-color: #DDDBDB;
+  background-color: #F3F3F3;
+  //background-color: #fff;
+  overflow: hidden;
   transition: background-color 0.3s ease-in-out;
+
   &.dark {
     background-color: #000;
   }
+
+  &.rent {
+    background-color: #000;
+  }
+}
+
+.rent-page .layout {
+  background-color: #000;
 }

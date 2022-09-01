@@ -6,10 +6,26 @@ import {contentPrefix} from "../../js/globals";
 import Notification from "../../components/Notification/Notification";
 
 
-export default function FormPage() {
+const content = {
+    main: {
+        formTitle: 'ЗАБРОНИРОВАТЬ СТОЛИК',
+        descriptionText1: 'Летняя терасса работает',
+        descriptionText2: 'с 12:00 до 00:00',
+        descriptionText3: 'по стандартному прайсу, без платы за время'
+    },
+    rent: {
+        formTitle: 'ЗАБРОНИРОВАТЬ ДАТУ',
+        descriptionText1: 'Информация про банкеты',
+        descriptionText2: 'За сколько нужно бронить',
+        descriptionText3: 'Какие залы и условия'
+    }
+}
+export default function FormPage({page}) {
     // const [isTelValid, setIsTelValid] = React.useState(false);
     // const [nameInput, setNameInput] = React.useState('');
     // const [telInput, setTelInput] = React.useState('');
+
+    const formContent = page === 'home' ? content.main : content.rent;
 
     const {isDarkMode} = useTheme();
 
@@ -22,7 +38,7 @@ export default function FormPage() {
 
     const isPhoneCorrect = (phoneNumber) => {
         if (phoneNumber.length !== 11) {
-           // alert('Please change number');
+            // alert('Please change number');
             setIsInputCorrect(false);
             return false;
         }
@@ -69,11 +85,11 @@ export default function FormPage() {
     }
 
     return (<section id="book">
-        <div className={`book-container ${isDarkMode ? 'dark' : 'light'}`}>
+        <div className={`book-container ${isDarkMode ? 'dark' : 'light'} ${page}`}>
             <img className="book-hand-top" src={`${contentPrefix}/images/form/form_hand_top.svg`} alt={''}/>
             <img className="book-hand-bottom" src={`${contentPrefix}/images/form/form_hand_bottom.svg`} alt={''}/>
             <div className="book-left">
-                <div className="book-title">ЗАБРОНИРОВАТЬ СТОЛИК</div>
+                <div className="book-title">{formContent.formTitle}</div>
                 <form className="book-form-container" onSubmit={completeForm}>
                     <div className="fieldset">
                         <input name={'from_name'} type={'text'} placeholder={'Имя (не обязательно)'}
@@ -95,22 +111,25 @@ export default function FormPage() {
                     <div className="book-policy-checkbox">
                         <input id="policy-checkbox" className={'custom-checkbox'} required type="checkbox"/>
                         <label className="fake-checkbox" htmlFor="policy-checkbox"/>
-                        Я ознакомлен(а) с &nbsp;<a href={`${contentPrefix}/pdf/pdf_example.pdf`}
-                                                   download={'Политика конфиденциальности.pdf'}>политикой
-                        конфиденциальности</a>
+                        <div className="book-policy-checkbox-text"> Я ознакомлен(а) с &nbsp;
+                            <a href={`${contentPrefix}/pdf/pdf_example.pdf`}
+                               download={'Политика конфиденциальности.pdf'}>
+                                политикой конфиденциальности
+                            </a>
+                        </div>
                     </div>
                     <button type='submit'>ЗАБРОНИРОВАТЬ</button>
                 </form>
             </div>
             <div className="book-right">
                 <div className="book-right-text">
-                    Летняя терасса работает <br/>
+                    {formContent.descriptionText1}
                 </div>
                 <div className="book-right-text">
-                    с 12:00 до 00:00 <br/>
+                    {formContent.descriptionText2}
                 </div>
                 <div className="book-right-text">
-                    по стандартному прайсу, <br/>без платы за время
+                    {formContent.descriptionText3}
                 </div>
             </div>
         </div>

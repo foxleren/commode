@@ -22,7 +22,7 @@
   display: flex;
   transition: all 0.3s ease-in-out;
 
-  &.dark {
+  &.dark.home {
     background-color: #fff;
     transition: all 0.3s ease-in-out;
 
@@ -200,7 +200,7 @@
 
   color: #656565;
   display: flex;
-  //align-items: center;
+  align-items: flex-start;
 
   input {
     position: absolute;
@@ -242,6 +242,7 @@
   }
 }
 
+
 .book-right {
   display: flex;
   flex-direction: column;
@@ -279,4 +280,9 @@
   &.visible {
     opacity: 1;
   }
+}
+
+.book-policy-checkbox-text {
+  order: 2;
+  margin-left: 10px;
 }

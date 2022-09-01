@@ -1,0 +1,35 @@
+.banquet-menu-container {
+  position: relative;
+  background-image: url(../../../public/images/menu/menu_background_lightMode.jpg);
+  padding: 57px 10px 51px 53px;
+  .menu-option {
+    color: #fff;
+    &>svg>path {
+      stroke: #fff;
+    }
+  }
+}
+
+.banquet-menu-person {
+  width: 591px;
+  height: 711px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scale(-1, 1)
+}
+
+.banquet-menu-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 0.12em;
+
+  color: #FFFFFF;
+
+
+  margin-top:500px;
+  max-width: 590px;
+}

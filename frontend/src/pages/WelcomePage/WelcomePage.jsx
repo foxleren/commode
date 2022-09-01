@@ -6,15 +6,16 @@ import useTheme from "../../hooks/useTheme";
 import ThemeToggle from "../../components/ThemeToggle/ThemeToggle";
 // import BackgroundVideo from '/videos/welcome_video.mp4';
 
-export default function WelcomePage() {
+export default function WelcomePage({page = 'main'}) {
     const {isDarkMode} = useTheme();
 
+    const headerPosition = 'relative';
     return (
-        <section className={`welcome-page-container ${isDarkMode ? 'dark' : 'light'}`}>
-            <Header/>
+        <section className={`welcome-page-container ${page} ${isDarkMode ? 'dark' : 'light'}`}>
+            <Header position={headerPosition}/>
             <div className="welcome-preview-container">
                 <div className="welcome-preview">
-                    <video autoPlay loop muted>
+                    <video autoPlay loop muted poster={`${contentPrefix}/images/video_poster.jpg`}>
                         <source src={`${contentPrefix}/videos/welcome_video.mp4`} type="video/mp4"/>
                     </video>
                 </div>

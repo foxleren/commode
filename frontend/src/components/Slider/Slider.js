@@ -8,7 +8,6 @@ import {modifyPath} from "../../tools/modifyPath";
 
 
 export default function Slider({images = [''], showToggler = true, toggleStyle= 'round', autoPlayTime = 3000}) {
-
     const [currentSlide, setCurrentSlide] = React.useState(0);
 
     function changeSlide(actualSlide = currentSlide + 1) {
