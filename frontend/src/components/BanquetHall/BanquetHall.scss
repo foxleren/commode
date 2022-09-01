@@ -10,6 +10,7 @@
   .slider-item {
     border-radius: 32px;
   }
+
   .slider-toggle-container {
     bottom: 10px;
   }
@@ -32,7 +33,10 @@
 .card-slider-item-container {
   flex-shrink: 0;
   transition: 1s ease-in-out;
-  width: 100%;
+  //width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 1200px;
 }
 
 .card-slider-item {
@@ -101,15 +105,15 @@
 
 .card-slider-item-right {
   border-radius: 32px;
-  max-width: 600px;
-  max-height: 530px;
+  //max-width: 600px;
+  //max-height: 530px;
 }
 
 .card-slider-toggle {
- margin-top: 30px;
+  margin-top: 30px;
   display: flex;
   //justify-content: space-evenly;
- // padding: 24px 32px;
+  // padding: 24px 32px;
 }
 
 .card-slider-toggle-item {
@@ -119,7 +123,8 @@
   cursor: pointer;
   background-repeat: no-repeat;
   transition: all 0.3s ease-in-out;
-zoom: 2;
+  zoom: 2;
+
   &.left {
     background-image: url(../../../public/images/toggle_left.svg);
     margin-right: 20px;
@@ -132,5 +137,94 @@ zoom: 2;
 
   &.disabled {
     opacity: 0.2;
+  }
+}
+
+@media (max-width: 1250px) {
+  .banquet-hall-hand {
+    display: none;
+  }
+  .card-slider-item-container {
+    //display: flex;
+    //justify-content: center;
+    width: 550px;
+  }
+  .card-slider-item {
+    flex-direction: column;
+    padding: 32px 16px;
+    margin-left: 50px;
+    max-width: 564px;
+    margin-right: 15px;
+    // width: 560px;
+    // height: 956px;
+  }
+  .card-slider-item-right {
+    order: 1;
+    width: 100%;
+  }
+  .card-slider-item-left {
+    //margin-top: 32px;
+    order: 2;
+    //width: fit-content;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .button {
+      width: 350px;
+      //margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .banquet-hall-container {
+    background-color: #f3f3f3;
+    padding: 23px 0;
+  }
+  .card-slider-item-container {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+  }
+  .card-slider-item {
+    padding: 32px 16px;
+    margin-left: 32px;
+    max-width: 250px;
+    margin-right: 15px;
+    background: #000;
+    // width: 560px;
+    // height: 956px;
+  }
+  .card-slider-item-left {
+    color: #fff;
+
+    .button {
+      background-color: #fff;
+      color: #000;
+      width: 180px;
+    }
+  }
+
+  .card-slider-item-title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 48px;
+  }
+  .card-slider-item-info {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 48px;
+  }
+  .card-slider-item-price {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .card-slider-toggle-item {
+    path {
+      stroke: #000;
+    }
   }
 }

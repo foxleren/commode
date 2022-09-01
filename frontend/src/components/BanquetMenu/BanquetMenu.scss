@@ -1,10 +1,15 @@
 .banquet-menu-container {
   position: relative;
-  background-image: url(../../../public/images/menu/menu_background_lightMode.jpg);
+  background: url(../../../public/images/menu/menu_background_lightMode.jpg) center no-repeat;
+  min-height: 800px;
   padding: 57px 10px 51px 53px;
+
   .menu-option {
+    position: absolute;
+    z-index:1;
     color: #fff;
-    &>svg>path {
+
+    & > svg > path {
       stroke: #fff;
     }
   }
@@ -28,8 +33,81 @@
   letter-spacing: 0.12em;
 
   color: #FFFFFF;
+  position: absolute;
+  z-index: 10;
 
-
-  margin-top:500px;
+  //margin-top: 500px;
+  bottom: 57px;
   max-width: 590px;
+}
+
+@media (max-width: 1250px) {
+  .banquet-menu-container {
+    padding: 27px 10px 51px 40px;
+  }
+  .banquet-menu-person {
+    width: 517px;
+    height: 624px;
+  }
+  .banquet-menu-container .menu-option {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .menu-option svg {
+    //width: 12px;
+    height: 24px;
+  }
+  .banquet-menu-text {
+    max-width: 457px;
+    //margin-top: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .banquet-menu-container {
+    margin: 21px;
+    position: relative;
+   // background: url(../../../public/images/menu/banquet_menu_mobile_small.jpg) center no-repeat;
+    overflow: hidden;
+    min-height: 700px;
+    padding: 0px 10px 0px 21px;
+  }
+  .banquet-menu-container:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, .4);
+  }
+  .banquet-menu-person {
+    width: 339px;
+    height: 409px;
+    right: -120px;
+  }
+  .banquet-menu-container .menu-option {
+    font-size: 20px;
+    line-height: 48px;
+    top: 470px;
+  }
+  .menu-option svg {
+    //width: 12px;
+    height: 14px;
+    margin-left:17px !important;
+  }
+  .banquet-menu-text {
+    max-width: 285px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .banquet-menu-container {
+    background: url(../../../public/images/menu/banquet_menu_mobile_small.jpg) center no-repeat;
+  }
 }

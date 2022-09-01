@@ -18,12 +18,12 @@ export default function HomePage() {
     const {showPreloader, isVisible, setIsVisible} = usePreloader();
     const {isDarkMode} = useTheme();
 
-    const show = async () => {
-        await setTimeout(() => console.log('after 5 seconds'), 5000);
-    }
+    // const show = async () => {
+    //     await setTimeout(() => console.log('after 5 seconds'), 5000);
+    // }
     useEffect(() => {
         //setIsVisible(false);
-        show().catch()
+        //show().catch()
         return () => {
             showPreloader(1500);
         }

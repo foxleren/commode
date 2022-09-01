@@ -31,3 +31,12 @@ footer {
 .footer-documents-item {
   margin-bottom: 30px;
 }
+
+@media (max-width: 900px) {
+  .footer-bottom {
+    flex-direction: column;
+    &>div:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

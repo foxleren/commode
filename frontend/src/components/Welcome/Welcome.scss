@@ -4,12 +4,14 @@
 
   &.rent {
     padding: 0 52px;
-    background: url(../../../public/images/welcome_rent.jpg) no-repeat;
+    background: url(../../../public/images/welcome_rent.jpg) no-repeat center;
     //background-size: 100% 100%;
     min-height: 960px;
   }
+
   &.dark {
     color: #fff;
+
     .welcome-bottom-address {
       border-color: #fff;
     }
@@ -51,7 +53,13 @@
   align-items: center;
 
   .address-span {
-    margin-top: 85px;
+    // margin-top: 85px;
+    position: absolute;
+    top: 280px;
+  }
+
+  .button {
+    display: none;
   }
 }
 
@@ -72,12 +80,129 @@
   align-items: flex-end;
   text-align: center;
   position: absolute;
+
   &.upper {
     //position: absolute;
     left: 165px;
-    top: 35px;
+    top: 60px;
   }
+
   &.lower {
     bottom: -35px;
+  }
+}
+
+.rent-page {
+  .welcome-logo-text {
+    &.lower {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .welcome-container.rent {
+    // min-height: 710px;
+    //  background-position-x: -400px;
+  }
+  .welcome-logo {
+    //width: 400px;
+    //height: 100px;
+    zoom: 0.77;
+  }
+
+  .welcome-logo-text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .rent-page {
+    .welcome-logo-text {
+      &.upper {
+        display: none;
+      }
+
+      &.lower {
+        display: initial;
+        top: 125px;
+      }
+    }
+  }
+  .welcome-content .address-span {
+    // margin-top: 300px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .welcome-container.rent {
+    // min-height: 710px;
+    background-position-x: -500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .welcome-container.rent {
+    // min-height: 710px;
+    background-position-x: -600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .welcome-container.rent {
+    min-height: 710px;
+    background-position-x: -700px;
+    padding: 0 25px;
+  }
+  .welcome-logo {
+    //width: 400px;
+    //height: 100px;
+    zoom: 0.42;
+  }
+
+  .welcome-logo-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .rent-page {
+    header {
+      .button {
+        display: none;
+      }
+    }
+
+    .welcome-logo-text {
+      &.upper {
+        display: none;
+      }
+
+      &.lower {
+        display: initial;
+        top: 75px;
+      }
+    }
+  }
+  .welcome-content .address-span {
+    // margin-top: 300px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    top: 240px;
+  }
+  .welcome-content {
+    .button {
+      display: initial;
+      position: absolute;
+      top: 280px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .welcome-container.rent {
+    // min-height: 710px;
+    background-position-x: -800px;
   }
 }
