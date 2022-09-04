@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/commode/static/css/main.b4d17036.css",
-    "main.js": "/commode/static/js/main.97e68e57.js",
+    "main.css": "/commode/static/css/main.a2f8cda2.css",
+    "main.js": "/commode/static/js/main.9929a954.js",
     "static/media/menu_background_lightMode.jpg": "/commode/static/media/menu_background_lightMode.e61afff31155a2cd676d.jpg",
     "static/media/slider_club_1.jpg": "/commode/static/media/slider_club_1.6a703a61f479c773424a.jpg",
     "static/media/slider_club_5.jpg": "/commode/static/media/slider_club_5.b4c6bae56e5964ba3e15.jpg",
@@ -26,11 +26,11 @@
     "index.html": "/commode/index.html",
     "static/media/toggle_left.svg": "/commode/static/media/toggle_left.aa7f802dac72ecfb7688.svg",
     "static/media/toggle_right.svg": "/commode/static/media/toggle_right.1a00ff9e267bbad787c8.svg",
-    "main.b4d17036.css.map": "/commode/static/css/main.b4d17036.css.map",
-    "main.97e68e57.js.map": "/commode/static/js/main.97e68e57.js.map"
+    "main.a2f8cda2.css.map": "/commode/static/css/main.a2f8cda2.css.map",
+    "main.9929a954.js.map": "/commode/static/js/main.9929a954.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4d17036.css",
-    "static/js/main.97e68e57.js"
+    "static/css/main.a2f8cda2.css",
+    "static/js/main.9929a954.js"
   ]
 }
