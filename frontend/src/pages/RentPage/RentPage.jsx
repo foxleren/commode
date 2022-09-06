@@ -14,14 +14,16 @@ export default function RentPage() {
 
     useEffect(() => {
         //setIsVisible(false);
+         document.body.scrollTop = 0;
         return () => {
             showPreloader(1500);
+            window.scrollTo({top: 0});
         }
     }, [])
     const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
     window.onscroll = () => {
-        let secondSection = window.document.getElementById('banquet-menu').offsetTop;
+        let secondSection = window.document.getElementById('banquet-menu').offsetTop - 200;
         let scrolled = window.pageYOffset;
         if (scrolled > secondSection) {
             setIsHeaderVisible(true);

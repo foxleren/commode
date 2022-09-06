@@ -1,11 +1,20 @@
 .menu-container {
-  background-color: #f3f3f3;
+  background-color: #fff;
   position: relative;
 
   &.dark {
     //background-image: url(../../../public/images/menu/menu_background_darkMode.jpg);
+    background-color: #000;
+
+    .menu-container-outer {
+      background-image: url(../../../public/images/menu/menu_dark.jpg);
+
+    }
+
+
     .menu-title {
       &:after {
+        color: #fff;
         content: 'МЕНЮ';
       }
     }
@@ -32,6 +41,7 @@
   position: absolute;
   top: 50px;
   left: 51px;
+
   &:after {
     content: 'МЕНЮ ПО СЕБЕСТОИМОСТИ';
   }
@@ -84,6 +94,18 @@
 }
 
 @media (max-width: 1250px) {
+
+  .menu-container {
+    &.dark {
+      .menu-container-outer {
+        // background-image: url(../../../public/images/menu/menu_dark.jpg);
+        //background-position: -650px;
+        //background-position:right;
+        zoom: 0.77;
+      }
+    }
+  }
+
   .menu-title {
     position: initial;
     color: #000;
@@ -96,6 +118,7 @@
   .menu-container {
     padding: 29px;
   }
+
   .menu-option-container {
     margin-top: 700px;
   }
@@ -117,10 +140,12 @@
     //  background-color: rgba(0, 0, 0, 0.2);
     //}
   }
+
   .menu-option {
     font-size: 32px;
     line-height: 48px;
   }
+
   .menu-option:not(:last-child) {
     margin-bottom: 26px;
   }
@@ -128,15 +153,40 @@
 
 }
 
+@media (max-width: 910px) {
+  .menu-container {
+    &.dark {
+      .menu-container-outer {
+        background-position-x: -600px;
+        background-position-y: -200px;
+        zoom: 0.70;
+      }
+    }
+  }
+}
+
 @media (max-width: 650px) {
+  .menu-container {
+    &.dark {
+      .menu-container-outer {
+        //background-image: url(../../../public/images/menu/mobile/menu_dark.jpg);
+        background-position-x: 000px;
+        background-position-y: 00px;
+       // backdrop-filter: opacity(0.8);
+       // filter: opacity(0.5);
+        zoom: 0.50;
+      }
+    }
+  }
+
   .menu-container {
     padding: 21px;
 
   }
   .menu-container-outer {
-   // background-position-x: 0px;
+    // background-position-x: 0px;
     //background-position-y: -200px;
-   // background-image: url(http://localhost:3000/commode/static/media/menu_background_lightMode.e61afff….jpg);
+    // background-image: url(http://localhost:3000/commode/static/media/menu_background_lightMode.e61afff….jpg);
     padding: 57px 10px 25px 21px;
     position: relative;
   }
@@ -148,6 +198,7 @@
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 12px;
+
     &:after {
       content: 'МЕНЮ ПО СЕБЕ СТОИМОСТИ';
     }
@@ -170,4 +221,6 @@
   .menu-option:hover > svg {
     margin-left: 10px !important;
   }
+
+
 }

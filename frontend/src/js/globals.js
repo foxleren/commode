@@ -14,3 +14,21 @@ export let theme = 'dark';
 //     console.log(document.getElementById('preloader').className);
 // }
 
+const setFixedHeader = () => {
+    const body = document.querySelector('body');
+    body.classList.toggle('show-menu');
+    const header = document.getElementById('header-fixed');
+    header.classList.toggle('show-menu');
+}
+const setAbsoluteHeader = () => {
+    const body = document.querySelector('body');
+    body.classList.toggle('show-menu');
+    const header = document.getElementById('header-absolute');
+    header.classList.toggle('show-menu');
+}
+export const setHeader = (position) => {
+    if (position === 'fixed') {
+        return setFixedHeader();
+    }
+    return setAbsoluteHeader();
+}

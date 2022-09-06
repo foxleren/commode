@@ -76,7 +76,7 @@ export default function FormPage({page}) {
             number = `(${areaCode}) ${middle} - ${number6_8} - ${number8_10}`;
         } else if (input.length > 6) {
             number = `(${areaCode}) ${middle} - ${number6_8}`;
-        } else if (input.length >= 3) {
+        } else if (input.length > 3) {
             number = `(${areaCode}) ${middle}`;
         } else if (input.length > 0) {
             number = `(${areaCode}`;
@@ -84,7 +84,7 @@ export default function FormPage({page}) {
         setToSend({...toSend, [e.target.name]: number});
     }
 
-    return (<section id="book">
+    return (<section id="book" className={`book-page ${isDarkMode ? 'dark' : 'light'}`}>
         <div className={`book-container ${isDarkMode ? 'dark' : 'light'} ${page}`}>
             <img className="book-hand-top" src={`${contentPrefix}/images/form/form_hand_top.svg`} alt={''}/>
             <img className="book-hand-bottom" src={`${contentPrefix}/images/form/form_hand_bottom.svg`} alt={''}/>

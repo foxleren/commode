@@ -2,9 +2,12 @@
   padding: 0px 48px;
   display: flex;
   flex-direction: column;
+ // background-color: #fff;
 
   //transition: color 1.5s;
   //transition: all 1s;
+
+
   &.dark {
     color: #fff;
 

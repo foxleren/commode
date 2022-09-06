@@ -37,6 +37,6 @@ export default function InteriorPage() {
 
     return (<section id="interior" className={`interior ${isDarkMode ? 'dark' : 'light'}`}>
         <div className="interior-title">ИНТЕРЬЕР</div>
-        <Slider images={isDarkMode ? images.club : images.restaurant} toggleStyle={'round'}/>
+        <Slider images={isDarkMode ? images.club : images.restaurant} toggleStyle={'round'} customImages/>
     </section>);
 }

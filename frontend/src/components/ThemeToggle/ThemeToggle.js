@@ -3,20 +3,24 @@ import React from "react";
 import useTheme from "../../hooks/useTheme";
 import usePreloader from "../../hooks/usePreloader";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({action}) {
     // const [isDarkMode, setIsDarkMode] = React.useState(false);
     const {isDarkMode, setIsDarkMode} = useTheme();
     const {isVisible, setIsVisible} = usePreloader();
+
+
 
     const changeTheme = () => {
         //setIsVisible(true);
         // setTimeout(() => {
         //     setIsVisible(!isVisible);
         // }, 1000);
+        //action();
         setIsDarkMode(!isDarkMode);
         setTimeout(() => {
             setIsVisible(false);
         }, 1000);
+        action();
     }
 
     return (

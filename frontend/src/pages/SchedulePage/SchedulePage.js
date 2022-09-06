@@ -6,8 +6,11 @@ import useTheme from "../../hooks/useTheme";
 export default function SchedulePage() {
     const {isDarkMode} = useTheme();
 
-    return (
-        <section id="schedule" className={`schedule ${isDarkMode ? 'dark' : 'light'}`}>
+    // window.onscroll = () => {
+    //     console.log('schedule');
+    // }
+
+    return (<section id="schedule" className={`schedule ${isDarkMode ? 'dark' : 'light'}`}>
             <div className="schedule-days">
                 <div className="schedule-days-container outer">
                     <div className="schedule-days-item">ПН</div>
@@ -21,15 +24,14 @@ export default function SchedulePage() {
                         </div>
                         <div className="schedule-days-subtext inner">
                             <span className="schedule-underline"/>
-                            живая музыка
+                            <div className={'schedule-days-subtext-text'}>живая музыка</div>
                         </div>
                     </div>
                     <div className="schedule-days-item">ВС</div>
                 </div>
-
                 <div className="schedule-days-subtext outer">
                     <span className="schedule-underline"/>
-                    <div>DJ-сеты, танцы и караоке</div>
+                    <div className={'schedule-days-subtext-text'}>DJ-сеты, танцы и караоке</div>
                 </div>
             </div>
 
@@ -37,14 +39,15 @@ export default function SchedulePage() {
             <img className="schedule-graffiti" src={`${contentPrefix}/images/schedule/schedule_graffiti.svg`}
                  alt={''}/>
             <img className="schedule-person" src={`${contentPrefix}/images/schedule/schedule_person.svg`} alt={''}/>
-            <div className="schedule-messages">
-                <div className="schedule-message first">и все это с 20:00</div>
-                <div className="schedule-message second">
-                    <span className="schedule-highlight">кстати, апероль <br/> тут по 290 рублей</span>
-                    <span className="schedule-message-subtext">перейти в режим клуба:</span>
+            <div id={'schedule-messages'} className="schedule-messages hidden">
+                <div id={'schedule-message-1'} className="schedule-message first hidden">и все это с 20:00</div>
+                <div id={'schedule-message-2'} className="schedule-message second hidden">
+                    {isDarkMode ? <span className="schedule-highlight">кстати, апероль <br/> тут по 290 рублей</span> :
+                        <span className="schedule-highlight">кстати, тут мидии <br/> по 390 рублей</span>}
+                    <span className="schedule-message-subtext">{isDarkMode ? 'перейти в режим ресторана:' : 'перейти в режим клуба:'}</span>
                     <ThemeToggle/>
                 </div>
             </div>
-        </section>
-    );
+
+        </section>);
 }

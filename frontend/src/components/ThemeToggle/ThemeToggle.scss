@@ -29,6 +29,7 @@
     color: #000;
     border-color: #fff;
     background-color: #fff;
+
     .header-button-change-theme-circle {
       left: 142px;
       //border-color: #fff;
@@ -84,5 +85,26 @@
 
   &.hidden {
     opacity: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-button-change-theme {
+    font-size: 14px;
+    line-height: 17px;
+    width: 149px;
+    height: 34px
+  }
+
+  .header-button-change-theme-text {
+    padding: 0 10px;
+  }
+  .header-button-change-theme-circle {
+    width: 24px;
+    height: 24px;
+
+  }
+  .header-button-change-theme.dark .header-button-change-theme-circle {
+    left: 116px;
   }
 }

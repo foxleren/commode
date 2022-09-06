@@ -1,7 +1,7 @@
 #book {
   padding: 60px 50px;
   position: relative;
-  background-color: #fff;
+  //background-color: #fff;
 
   .book-hand-top {
     position: absolute;
@@ -16,24 +16,35 @@
   }
 }
 
+.book-page {
+  transition: all 0.3s ease-in-out;
+  &.dark {
+    background-color: #000;
+  }
+  &.light {
+    background-color: #fff;
+  }
+}
+
 .book-container {
   padding: 225px 174px 237px 174px;
   background: #000000;
   display: flex;
   transition: all 0.3s ease-in-out;
 
-  &.dark.home {
-    background-color: #fff;
+  //&.dark.home {
+    &.dark {
+    background-color: #000;
     transition: all 0.3s ease-in-out;
 
     .book-title {
-      color: #000;
+      color: #fff;
     }
 
     .book-form-container input {
-      background-color: #fff;
-      border-color: #000;
-      color: #000;
+      background-color: #000;
+      border-color: #fff;
+      color: #fff;
     }
 
     .fieldset label {
@@ -41,12 +52,12 @@
     }
 
     .book-form-container button {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
     }
 
     .book-right-text {
-      color: #000;
+      color: #fff;
     }
 
     .book-hand-top, .book-hand-bottom {
@@ -54,7 +65,7 @@
     }
 
     .book-policy-checkbox .fake-checkbox::before {
-      border-color: #000;
+      border-color: #fff;
     }
 
     .book-policy-checkbox .custom-checkbox:checked + label::before {
@@ -62,15 +73,15 @@
     }
 
     .custom-checkbox:checked + label::before {
-      color: #000;
+      color: #fff;
     }
 
     .incorrect-phone {
-      color: #000;
+      color: #fff;
     }
 
     .fieldset label {
-      // color: #000;
+       color: #fff;
     }
   }
 }
@@ -288,9 +299,9 @@
   margin-left: 10px;
 }
 
-.book-hand-bottom, .book-hand-top {
-  display: none;
-}
+//.book-hand-bottom, .book-hand-top {
+//  display: none;
+//}
 
 @media (max-width: 1250px) {
   #book {
@@ -306,12 +317,16 @@
     display: flex;
     margin: 0;
     justify-content: space-between;
-    flex-direction: row;
+    //flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
     //font-size: 16px;
     //line-height: 16px;
     margin-bottom: 200px;
+    flex-direction: column;
+  }
+  .book-right {
+    display: none;
   }
   .book-right-text:not(:last-child) {
     padding-right: 45px;
@@ -325,15 +340,22 @@
   .rent-page {
 
   }
+  .book-hand-bottom, .book-hand-top {
+    display: none;
+  }
 }
 
 @media (max-width: 650px) {
   #book {
-    background-color: #f3f3f3;
+    //background-color: #fff;
+    &.light {
+      background-color: #fff;
+      .book-container {
+        background-color: #fff;
+      }
+    }
   }
-  .book-container {
-    background-color: #f3f3f3;
-  }
+
   .book-right {
     display: none;
   }
@@ -362,6 +384,9 @@
   .book-form-container button {
     color: #fff;
     background-color: #000;
+    padding: 8.5px 24px;
+    font-size: 14px;
+    line-height: 17px;
   }
   .book-form-container input#phoneNumberInput {
     padding-left: 45px;

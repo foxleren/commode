@@ -61,3 +61,42 @@
   margin-top: 150px;
 
 }
+
+@media (max-width: 1000px) {
+  .map-card-container {
+    //position: relative;
+    //left: 0;
+    //top: 0;
+    //transform: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .button {
+      margin: 0 auto;
+    }
+  }
+
+  .map-card-title {
+    margin-bottom: 40px;
+  }
+
+  .map-card-text {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .map-card-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .map-card-text {
+    font-size:16px;
+    line-height: 32px;
+  }
+  .map-card-container {
+    .map {
+      max-height: 400px !important;
+    }
+  }
+}

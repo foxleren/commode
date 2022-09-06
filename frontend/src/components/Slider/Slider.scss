@@ -24,7 +24,7 @@
   img {
     background-position: 50%;
     background-repeat: no-repeat;
-    max-height: 1200px;
+    // max-height: 1200px;
     //object-fit: cover;
     width: 100%;
   }
@@ -71,6 +71,14 @@
   }
 }
 
+@media (max-width: 1250px) {
+  .slider-container {
+    img {
+      // height: 1000px;
+    }
+  }
+}
+
 @media (max-width: 650px) {
   .slider-toggle-container {
     bottom: 0 !important;
@@ -79,5 +87,308 @@
     width: 8px;
     height: 8px;
   }
+}
+
+.slide-container {
+  //padding-bottom: 945px;
+  div {
+    background-repeat: no-repeat;
+    min-height: 700px;
+    background-size: cover;
+  }
+}
+
+#interior {
+  &.light {
+    .slider-image-1 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_1.jpg);
+    }
+
+    .slider-image-2 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_2.jpg);
+    }
+
+    .slider-image-3 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_3.jpg);
+    }
+
+    .slider-image-4 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_4.jpg);
+    }
+
+    .slider-image-5 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_5.jpg);
+    }
+  }
+
+  &.dark {
+    .slider-image-1 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_1.jpg);
+    }
+
+    .slider-image-2 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_2.jpg);
+    }
+
+    .slider-image-3 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_3.jpg);
+    }
+
+    .slider-image-4 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_4.jpg);
+    }
+
+    .slider-image-5 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_5.jpg);
+    }
+  }
+}
+
+.extra-slider {
+  &.light {
+    .slider-image-1 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_1.jpg);
+    }
+
+    .slider-image-2 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_2.jpg);
+    }
+
+    .slider-image-3 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_3.jpg);
+    }
+
+    .slider-image-4 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_4.jpg);
+    }
+
+    .slider-image-5 {
+      background-image: url(../../../public/images/slider_images/club/pc/slider_club_5.jpg);
+    }
+  }
+
+  &.dark {
+    .slider-image-1 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_1.jpg);
+    }
+
+    .slider-image-2 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_2.jpg);
+    }
+
+    .slider-image-3 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_3.jpg);
+    }
+
+    .slider-image-4 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_4.jpg);
+    }
+
+    .slider-image-5 {
+      background-image: url(../../../public/images/slider_images/restaurant/pc/slider_restaurant_5.jpg);
+    }
+  }
+}
+
+
+@media (max-width: 1250px) {
+  .slide-container {
+    div {
+      min-height: 1000px;
+    }
+  }
+  #interior {
+    &.light {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_5.jpg);
+      }
+    }
+
+    &.dark {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_5.jpg);
+      }
+    }
+  }
+
+  .extra-slider {
+    &.light {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/club/tablet/slider_club_5.jpg);
+      }
+    }
+
+    &.dark {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/restaurant/tablet/slider_restaurant_5.jpg);
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .slide-container {
+    div {
+      min-height: 700px;
+    }
+  }
+  #interior {
+    &.light {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_5.jpg);
+      }
+    }
+
+    &.dark {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_5.jpg);
+      }
+    }
+  }
+
+  .extra-slider {
+    &.light {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/club/mobile/slider_club_5.jpg);
+      }
+    }
+
+    &.dark {
+      .slider-image-1 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_1.jpg);
+      }
+
+      .slider-image-2 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_2.jpg);
+      }
+
+      .slider-image-3 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_3.jpg);
+      }
+
+      .slider-image-4 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_4.jpg);
+      }
+
+      .slider-image-5 {
+        background-image: url(../../../public/images/slider_images/restaurant/mobile/slider_restaurant_5.jpg);
+      }
+    }
+  }
+}
+
+.extra-slider {
 
 }

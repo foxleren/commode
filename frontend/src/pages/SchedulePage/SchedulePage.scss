@@ -6,8 +6,10 @@
   //max-width: 1100px;
   background-color: #fff;
   transition: background-color 0.3s ease-in-out;
+
   &.dark {
     background-color: #000;
+
     .schedule-days {
       color: #fff;
     }
@@ -19,6 +21,7 @@
     .header-button-change-theme-circle, .header-button-change-theme {
       border-color: #000;
     }
+
     .header-button-change-theme-text {
       color: #000;
     }
@@ -33,6 +36,7 @@
   max-width: 1100px;
   margin-bottom: 40px;
   transition: color 0.3s ease-in-out;
+  position: relative;
 }
 
 .schedule-days-item {
@@ -120,20 +124,37 @@
 .schedule-person {
   position: absolute;
   left: 140px;
-  bottom: -580px;
+  bottom: -450px;
   //transform: translateX(-244px);
-  z-index: 2;
+  z-index: 3;
 }
 
 .schedule-messages {
   float: right;
+  //position: absolute;
+}
+
+#schedule-messages {
+  transition: transform 0.7s ease-in-out;
+
+  &.visible {
+
+  }
+
+  &.hidden {
+    transform: translateX(1000px) !important;
+  }
+}
+
+#schedule-message-1, #schedule-message-2 {
+
 }
 
 .schedule-message {
   padding: 32px 40px;
   width: 610px;
   background-color: #FFFFFF;
-
+  border: 1px solid #000000;
   display: flex;
   flex-direction: column;
 
@@ -172,6 +193,7 @@
       background-color: transparent;
       border-color: #000;
       color: #000;
+      z-index: 4;
 
       & > .header-button-change-theme-circle {
         background-color: transparent;
@@ -183,4 +205,269 @@
 
 .schedule-message-subtext {
   margin-bottom: 30px;
+}
+
+
+@media (max-width: 1500px) {
+
+  .schedule {
+    //padding-bottom: 900px;
+    padding: 40px 100px 530px 100px;
+    overflow: hidden;
+  }
+  .schedule-days-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .schedule-days-item {
+    &:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+  .schedule-days-container.inner {
+    flex-direction: column;
+    position: relative;
+  }
+  .schedule-days-container div {
+    flex-direction: column;
+
+    & > .schedule-days-item:first-child {
+      margin-top: 32px;
+    }
+  }
+
+  .schedule-days-subtext.inner {
+    width: 150px;
+    position: relative;
+
+    span {
+      transform: rotate(270deg);
+      position: absolute;
+      left: 100px;
+      bottom: 67px;
+    }
+
+    .schedule-days-subtext-text {
+      position: absolute;
+      left: 230px;
+      bottom: 50px;
+
+      //font-size: 24px;
+      //line-height: 29px;
+    }
+  }
+
+  .schedule-days-subtext.outer {
+    width: 640px;
+    position: relative;
+    //bottom: 0;
+
+    span {
+      transform: rotate(270deg);
+      position: absolute;
+      left: -210px;
+      top: -340px;
+    }
+
+    .schedule-days-subtext-text {
+      max-width: 250px;
+      position: absolute;
+      top: -640px;
+      left: 140px;
+
+      //font-size: 24px;
+      //line-height: 29px;
+    }
+  }
+
+  .schedule-messages {
+    position: absolute;
+    top: 800px;
+    right: 100px;
+    z-index: 4;
+  }
+
+  .schedule-message {
+    padding: 24px 16px 24px 32px;
+    width: 500px;
+
+    //font-size: 24px;
+    //line-height: 29px;
+
+    .schedule-highlight {
+      //font-size: 24px;
+      //line-height: 29px;
+      //margin-bottom: 40px;
+    }
+  }
+
+  .schedule-message.first {
+    //font-size: 24px;
+    //line-height: 29px;
+  }
+
+
+  .schedule-graffiti {
+    bottom: -650px;
+    left: -300px;
+    // background-position-x: -300px;
+    z-index: 1;
+    zoom: 0.7;
+    transform: none;
+  }
+
+  .schedule-person {
+    position: absolute;
+    left: -17px;
+    bottom: -205px;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 1250px) {
+
+  .schedule {
+    //padding-bottom: 900px;
+    padding: 40px 00px 450px 29px;
+    //margin: 0px 29px 29px 29px;
+    overflow: hidden;
+  }
+  .schedule-days-subtext.outer .schedule-days-subtext-text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .schedule-days-subtext.inner .schedule-days-subtext-text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .schedule-messages {
+    right: 29px;
+  }
+
+  .schedule-message {
+    //padding: 24px 16px 24px 32px;
+    width: 450px;
+
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .schedule-message .schedule-highlight {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 25px;
+  }
+  .schedule-graffiti {
+    bottom: -650px;
+    left: -450px;
+    z-index: 1;
+    zoom: 0.7;
+    transform: none;
+  }
+  .schedule-person {
+    position: absolute;
+    left: -17px;
+    bottom: -205px;
+    zoom: 0.8;
+    z-index: 3;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .schedule {
+    margin: 0;
+
+    padding: 10px 00px 350px 21px;
+  }
+  .schedule-days-item {
+    font-size: 32px;
+    line-height: 64px;
+  }
+
+  .schedule-days-item:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .schedule-days-container div > .schedule-days-item:first-child {
+    margin-top: 10px;
+  }
+
+  .schedule-days-subtext.outer {
+    width: 480px;
+
+    .schedule-underline {
+      left: -190px;
+      top: -273px;
+    }
+
+    .schedule-days-subtext-text {
+      width: 170px;
+      top: -500px;
+      left: 80px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .schedule-days-subtext.inner {
+    width: 90px;
+
+    .schedule-underline {
+      left: 60px;
+      bottom: 48px;
+    }
+
+    .schedule-days-subtext-text {
+      font-size: 16px;
+      line-height: 20px;
+      left: 150px;
+      bottom: 50px;
+    }
+  }
+
+  .schedule-messages {
+    right: 15px;
+    top: 550px;
+  }
+
+  .schedule-message {
+    width: 256px;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #000000;
+    border-radius: 16px 16px 16px 0px;
+    padding: 8px 16px;
+    //right: -10px;
+  }
+
+  .schedule-message .schedule-highlight {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 15px;
+  }
+
+  .schedule-message-subtext {
+    margin-bottom: 20px;
+  }
+
+  .schedule-graffiti {
+    bottom: 50px;
+    left: -290px;
+    z-index: 1;
+    zoom: 0.3;
+  }
+  .schedule-person {
+    position: absolute;
+    left: -109px;
+    bottom: -35px;
+    zoom: 0.6;
+    z-index: 3;
+  }
+
 }
