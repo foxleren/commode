@@ -1,0 +1,468 @@
+.dialog-section {
+  background-color: #000;
+  position: relative;
+
+  transition: all 0.3s ease-in-out;
+
+  padding: 0px 48px 48px 48px;
+  overflow: hidden;
+
+  &.dark {
+    background-color: #000;
+    .dialog-section-inner {
+      background-color: #000;
+    }
+
+    .dialog-graffiti {
+      background-image: url(../../../public/images/dialog/dialog_graffiti_red.svg);
+    }
+  }
+}
+
+.dialog-section-inner {
+  display: flex;
+  position: relative;
+  background-color: #ED6A5E;
+  overflow: hidden;
+  padding-bottom: 1000px;
+}
+
+.dialog-graffiti {
+  zoom: 1.5;
+  background: url(../../../public/images/dialog/dialog_graffiti_black.svg) no-repeat;
+  background-position-x: -430px;
+  background-position-y: -50px;
+  width: 840px;
+  height: 852px;
+  //width: 6307px;
+  //height: 931px;
+  transition: 0.3s ease-in-out;
+  //float: left;
+  //z-index:100;
+  position: absolute;
+  left: 0;
+  // bottom:0;
+}
+
+.dialog-person-1 {
+  position: absolute;
+  left: -20px;
+  bottom: 0px;
+  z-index: 1;
+  width: 612px;
+  height: 737px;
+  //background-image: url(../../../public/images/dialog/dialog_person_1.svg) ;
+}
+
+.dialog-person-2 {
+  position: absolute;
+  right: -90px;
+  bottom: -45px;
+  z-index: 1;
+
+  &.inside {
+    display: none;
+  }
+}
+
+.dialog-message-container-outer {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.dialog-message-container {
+  //position: relative;
+  //width: 100%;
+  //padding-bottom: 400px;
+  // margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#dialog-message-2, #dialog-message-4{
+  transition: transform 0.7s ease-in-out;
+  &.visible {
+
+  }
+  &.hidden {
+    transform: translateX(1700px) !important;
+  }
+}
+
+#dialog-message-1, #dialog-message-3{
+  transition: transform 0.7s ease-in-out;
+  &.visible {
+
+  }
+  &.hidden {
+    transform: translateX(-1700px) !important;
+  }
+
+}
+
+.dialog-message {
+  padding: 32px 40px;
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  //text-transform: lowercase;
+  border-radius: 56px;
+  max-width: 590px;
+  width: 580px;
+
+  &:not(:last-child) {
+    margin-bottom: 48px;
+  }
+
+  span {
+    color: #ED6A5E;
+    font-weight: 700;
+
+  }
+
+  &.white {
+    background-color: #fff;
+    color: #000;
+  }
+
+  &.transparent {
+    color: #fff;
+    border: 1px solid #FFFFFF;
+  }
+
+  &.first, &.second {
+    z-index: 0;
+  }
+
+  &.third, &.fourth {
+    z-index: 3;
+  }
+
+  &.first {
+    top: 27px;
+    left: 50%;
+    //margin-top: 48px;
+    transform: translateX(-50%);
+  }
+
+  &.second {
+    top: 160px;
+    left: 50%;
+    transform: translateX(calc(-50% + 200px));
+  }
+
+  &.third {
+    top: 525px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.fourth {
+    position: absolute;
+    //bottom: 40px;
+    top: 730px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(calc(-50% + 150px));
+  }
+
+  &.left {
+    border-bottom-left-radius: 0;
+  }
+
+  &.right {
+    border-bottom-right-radius: 0;
+  }
+}
+
+//@media (max-width: 1380px) {
+//  .dialog-message.third {
+//    top: 600px;
+//  }
+//  .dialog-message.fourth {
+//    top: 810px;
+//  }
+//}
+
+@media (max-width: 1600px) {
+  .dialog-section-inner {
+    padding-bottom: 700px;
+  }
+  .dialog-message {
+    font-size: 24px;
+    line-height: 29px;
+    padding: 24px 32px;
+    width: 560px;
+
+    &.first {
+      transform: translateX(-300px);
+
+    }
+
+    &.second {
+      top: 140px;
+      transform: translateX(calc(-50% + 100px));
+    }
+
+    &.third {
+      top: 400px;
+      transform: translateX(-300px);
+    }
+
+    &.fourth {
+      top: 570px;
+      z-index: 1;
+      transform: translateX(calc(-50% + 50px));
+    }
+  }
+  .dialog-person-1 {
+    zoom: 0.9;
+  }
+  .dialog-person-2 {
+    zoom: 0.9;
+  }
+}
+
+
+@media (max-width: 1250px) {
+  .dialog-section {
+    padding: 0px 29px 0px 29px;
+  }
+  .dialog-section {
+    &.light {
+      .dialog-section-inner {
+        background-color: #fff;
+      }
+    }
+
+    &.dark {
+      .dialog-section-inner {
+        background-color: #000;
+      }
+      .dialog-graffiti{
+        background: url(../../../public/images/dialog/dialog_graffiti_red.svg) no-repeat;
+      }
+    }
+  }
+  .dialog-section-inner {
+    // background-color: #fff;
+    padding-bottom: 1000px;
+    transition: all 0.3s ease-in-out;
+  }
+  .dialog-person-1 {
+    //width: 473px;
+    //height: 568px;
+    // zoom: 0.7;
+    //left: -100px;
+    left: -120px;
+    bottom: -100px;
+    //background: url(../../../public/images/dialog/mobile/person_1.svg) no-repeat center;
+  }
+  .dialog-person-2 {
+
+    &.inside {
+      display: initial;
+      width: 661px;
+      height: 661px;
+      right: -140px;
+      bottom: -80px;
+    }
+
+    &.outside {
+      display: none;
+    }
+  }
+
+  .dialog-message {
+    font-size: 24px;
+    line-height: 29px;
+
+    &.first {
+      transform: translateX(-300px);
+      width: 350px;
+    }
+
+    &.second {
+      top: 140px;
+      transform: translateX(calc(-50% + 100px));
+
+      width: 496px;
+    }
+
+    &.third {
+      top: 400px;
+      width: 497px;
+      transform: translateX(-300px);
+    }
+
+    &.fourth {
+      top: 570px;
+      z-index: 1;
+      transform: translateX(calc(-50% + 50px));
+      width: 350px;
+    }
+  }
+
+  .dialog-graffiti {
+    zoom: 1;
+    left: -390px;
+    bottom: -200px;
+  }
+
+
+  .dialog-section {
+    background-color: #FFF;
+
+    &.light {
+      .dialog-graffiti {
+        background: url(../../../public/images/dialog/dialog_graffiti_red.svg) no-repeat;
+      }
+
+      .dialog-message {
+        &.transparent {
+          color: #000;
+          border-color: #000;
+        }
+
+        &.white {
+          color: #fff;
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .dialog-section-inner {
+    background-color: #fff;
+    padding-bottom: 1050px;
+  }
+  .dialog-message {
+    width: 350px !important;
+
+    &.first {
+      transform: translateX(calc(-50% - 70px));
+    }
+
+    &.second {
+      transform: translateX(calc(-50% + 50px));
+    }
+
+    &.third {
+      top: 515px;
+      transform: translateX(calc(-50% - 70px));
+    }
+
+    &.fourth {
+      transform: translateX(calc(-50% + 50px));
+      top: 685px;
+      z-index: 2;
+    }
+  }
+
+  .dialog-person-1 {
+    width: 457px;
+    height: 522px;
+  }
+
+  .dialog-person-2.inside {
+    zoom: 1;
+    //width: 364px;
+    //height: 377px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dialog-section-inner {
+    padding-bottom: 660px;
+  }
+  .dialog-message {
+    font-size: 14px;
+    line-height: 17px;
+    // border-radius: 16px 16px 0px 16px;
+    padding: 14px 16px;
+    width: 220px !important;
+    left: 50%;
+
+    &.first {
+      transform: translateX(-50%) !important;
+    }
+
+    &.second {
+      top: 90px;
+      transform: translateX(calc(-50% + 50px));
+      border-radius: 16px 16px 0px 16px;
+    }
+
+    &.third {
+      top: 280px;
+      transform: translateX(-50%) !important;
+      border-radius: 16px 16px 16px 0px;
+    }
+
+    &.fourth {
+      transform: translateX(calc(-50% + 50px));
+      top: 370px;
+      border-radius: 16px 16px 0px 16px;
+    }
+  }
+
+  .dialog-person-1 {
+    width: 242px;
+    height: 292px;
+    bottom: 0;
+    left: -60px;
+  }
+
+  .dialog-person-2.inside {
+    width: 299px;
+    height: 299px;
+    right: -88px;
+    bottom: -7px;
+  }
+
+  .dialog-graffiti {
+    zoom: 0.5;
+    left: -440px;
+    bottom: -50px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .dialog-message {
+    &.second {
+      transform: translateX(calc(-50% + 30px));
+
+    }
+
+    &.fourth {
+      transform: translateX(calc(-50% + 30px));
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .dialog-message {
+    &.second {
+      transform: translateX(calc(-50% + 10px));
+
+    }
+
+    &.fourth {
+      transform: translateX(calc(-50% + 10px));
+    }
+  }
+}

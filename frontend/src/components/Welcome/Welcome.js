@@ -6,6 +6,7 @@ import useTheme from "../../hooks/useTheme";
 import {Link} from "react-scroll";
 import Button from "../Button/Button";
 import React from "react";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 export default function Welcome({page = 'home'}) {
     const {isDarkMode} = useTheme();
@@ -35,6 +36,7 @@ export default function Welcome({page = 'home'}) {
                     {/*    <div className="welcome-logo"/>*/}
                     {/*    <div className="welcome-preview-subtext">меню по собестоимости</div>*/}
                     {/*</div>*/}
+                    <ThemeToggle/>
                     <div className={'welcome-content'}>
                         <img className={'welcome-logo'} src={`${contentPrefix}/images/welcome_logo.svg`} alt={''}/>
                         <div className={'welcome-logo-text lower'}>меню по себестоимости</div>

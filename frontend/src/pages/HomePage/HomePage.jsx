@@ -1,4 +1,4 @@
-import DescriptionPage from "../DescriptionPage/DescriptionPage";
+import DialogSection from "../../sections/DialogSection/DialogSection";
 import InteriorPage from "../InteriorPage/InteriorPage";
 import MenuPage from "../MenuPage/MenuPage";
 import SchedulePage from "../SchedulePage/SchedulePage";
@@ -122,7 +122,7 @@ export default function HomePage() {
     return (<div className={`home-page ${isDarkMode ? 'dark' : 'light'}`}>
         <Header page={'home'} position={'fixed'} isVisible={isHeaderVisible}/>
         <Welcome page={'home'}/>
-        <DescriptionPage/>
+        <DialogSection/>
         <InteriorPage/>
         <MenuPage/>
         <SchedulePage/>

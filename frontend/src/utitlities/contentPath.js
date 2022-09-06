@@ -1,3 +1,3 @@
 export const contentPath = {
-    description_graffiti: '/images/description/description_graffiti_lightMode.svg',
+    description_graffiti: '/images/dialog/dialog_graffiti_lightMode.svg',
 }

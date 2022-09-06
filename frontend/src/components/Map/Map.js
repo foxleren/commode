@@ -7,10 +7,6 @@ const link = 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constru
 
 export default function Map() {
 
-    let mapHeight = 720;
-    // if (window.innerWidth <= 650) {
-    //    mapHeight = 400;
-    // }
     return (
 
         <div className="map-container">
@@ -37,7 +33,7 @@ export default function Map() {
             <div className="map">
                 <iframe
                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A4c85148e7c2c826b456287b64fea0701b13dc6d3720c9d3493ae32f8bb7223d4&amp;source=constructor"
-                    width="100%" height={mapHeight} frameBorder="0"/>
+                    width="100%" height={700} frameBorder="0" scroll={false}/>
             </div>
 
             {/*<Script src={link}/>*/}

@@ -14,7 +14,7 @@ export default function BanquetMenu() {
             <div className={'banquet-menu-text'}>
                 Проведите ваше мероприятие в шикарных залах центра Санкт-Петербурга или на самой большой видовой терассе
             </div>
-            <img className={'banquet-menu-person'} src={`${contentPrefix}/images/description/description_person_1.svg`} alt={''}/>
+            <img className={'banquet-menu-person'} src={`${contentPrefix}/images/dialog/dialog_person_1.svg`} alt={''}/>
         </section>
     );
 }

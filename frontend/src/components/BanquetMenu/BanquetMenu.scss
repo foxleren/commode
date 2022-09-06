@@ -6,7 +6,7 @@
 
   .menu-option {
     position: absolute;
-    z-index:1;
+    z-index: 1;
     color: #fff;
 
     & > svg > path {
@@ -41,6 +41,12 @@
   max-width: 590px;
 }
 
+@media (max-width: 1600px) and (min-width: 1250px) {
+  .banquet-menu-container {
+    min-height: 690px;
+  }
+}
+
 @media (max-width: 1250px) {
   .banquet-menu-container {
     padding: 27px 10px 51px 40px;
@@ -67,7 +73,7 @@
   .banquet-menu-container {
     margin: 21px;
     position: relative;
-   // background: url(../../../public/images/menu/banquet_menu_mobile_small.jpg) center no-repeat;
+    // background: url(../../../public/images/menu/banquet_menu_mobile_small.jpg) center no-repeat;
     overflow: hidden;
     min-height: 700px;
     padding: 0px 10px 0px 21px;
@@ -82,7 +88,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .4);
   }
   .banquet-menu-person {
     width: 339px;
@@ -97,7 +103,7 @@
   .menu-option svg {
     //width: 12px;
     height: 14px;
-    margin-left:17px !important;
+    margin-left: 17px !important;
   }
   .banquet-menu-text {
     max-width: 285px;

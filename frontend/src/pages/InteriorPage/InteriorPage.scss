@@ -35,6 +35,14 @@
   transition: color 0.3s ease-in-out;
 }
 
+@media (max-width: 1600px) and (min-width: 1250px) {
+
+  .menu-option {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
 @media (max-width: 1250px) {
   #interior {
     padding: 40px 29px 40px 29px;

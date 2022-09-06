@@ -16,6 +16,7 @@ export default function ThemeToggle({action}) {
         //     setIsVisible(!isVisible);
         // }, 1000);
         //action();
+        window.scrollTo({top: 0});
         setIsDarkMode(!isDarkMode);
         setTimeout(() => {
             setIsVisible(false);

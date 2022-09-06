@@ -18,9 +18,11 @@
 
 .book-page {
   transition: all 0.3s ease-in-out;
+
   &.dark {
     background-color: #000;
   }
+
   &.light {
     background-color: #fff;
   }
@@ -33,7 +35,7 @@
   transition: all 0.3s ease-in-out;
 
   //&.dark.home {
-    &.dark {
+  &.dark {
     background-color: #000;
     transition: all 0.3s ease-in-out;
 
@@ -60,9 +62,9 @@
       color: #fff;
     }
 
-    .book-hand-top, .book-hand-bottom {
-      display: none;
-    }
+    //.book-hand-top, .book-hand-bottom {
+    //  display: none;
+    //}
 
     .book-policy-checkbox .fake-checkbox::before {
       border-color: #fff;
@@ -81,7 +83,7 @@
     }
 
     .fieldset label {
-       color: #fff;
+      color: #fff;
     }
   }
 }
@@ -254,13 +256,20 @@
   }
 }
 
+.rent-page {
+  .book-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 150px;
+    margin-top: 20px;
+  }
+}
 
-.book-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 150px;
-  margin-top: 20px;
+.home-page {
+  .book-right {
+    display: none;
+  }
 }
 
 .book-right-text {
@@ -302,6 +311,17 @@
 //.book-hand-bottom, .book-hand-top {
 //  display: none;
 //}
+@media (max-width: 1500px) and (min-width: 1250px) {
+  //.book-right {
+  //  display: none;
+  //}
+  #book .book-hand-bottom {
+    position: absolute;
+    bottom: 0;
+    right: -115px;
+  }
+}
+
 
 @media (max-width: 1250px) {
   #book {
@@ -313,21 +333,24 @@
     padding: 0;
   }
   .book-right {
-    order: 1;
-    display: flex;
-    margin: 0;
-    justify-content: space-between;
-    //flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0;
-    //font-size: 16px;
-    //line-height: 16px;
-    margin-bottom: 200px;
-    flex-direction: column;
+    padding-left: 0 !important;
+    margin-bottom: 30px;
   }
-  .book-right {
-    display: none;
-  }
+
+  //.book-right {
+  //  order: 1;
+  //  display: flex;
+  //  margin: 0;
+  //  justify-content: space-between;
+  //  //flex-direction: row;
+  //  flex-wrap: wrap;
+  //  padding: 0;
+  //  //font-size: 16px;
+  //  //line-height: 16px;
+  //  margin-bottom: 200px;
+  //  flex-direction: column;
+  //}
+
   .book-right-text:not(:last-child) {
     padding-right: 45px;
   }
@@ -350,6 +373,7 @@
     //background-color: #fff;
     &.light {
       background-color: #fff;
+
       .book-container {
         background-color: #fff;
       }
@@ -357,7 +381,7 @@
   }
 
   .book-right {
-    display: none;
+    display: none !important;
   }
   .book-title {
     color: #000;
