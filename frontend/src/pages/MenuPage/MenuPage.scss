@@ -82,6 +82,11 @@
   &:last-child {
     color: #ED6A5E;
 
+    &.dark {
+      line-height: 64px;
+    }
+
+
     & > svg > path {
       stroke: #ED6A5E;
     }
@@ -95,7 +100,7 @@
 
 @media (max-width: 1600px) and (min-width: 1250px) {
   .menu-option-container {
-    margin-top: 440px;
+    margin-top: 460px;
   }
   .menu-option {
     font-size: 40px;
@@ -111,10 +116,15 @@
   .menu-container {
     &.dark {
       .menu-container-outer {
-        // background-image: url(../../../public/images/menu/menu_dark.jpg);
-        //background-position: -650px;
-        //background-position:right;
-        zoom: 0.77;
+        background: url(../../../public/images/menu/tablet/menu_background_dark.jpg) center no-repeat;
+        background-size: cover;
+        background-position-x: 0;
+        background-position-y: 0;
+        zoom: 1;
+      }
+
+      .menu-option-container {
+        //margin-top: 560px;
       }
     }
   }
@@ -157,6 +167,12 @@
   .menu-option {
     font-size: 32px;
     line-height: 48px;
+
+    &:last-child {
+      &.dark {
+        line-height: 48px;
+      }
+    }
   }
 
   .menu-option:not(:last-child) {
@@ -169,13 +185,24 @@
 @media (max-width: 910px) {
   .menu-container {
     &.dark {
-      .menu-container-outer {
-        background-position-x: -600px;
-        background-position-y: -200px;
-        zoom: 0.70;
-      }
+      //.menu-container-outer {
+      //  background-position-x: -600px;
+      //  background-position-y: -200px;
+      //  zoom: 0.70;
+      //}
     }
   }
+}
+
+@media (max-width: 650px) and (min-width: 500px) {
+ .menu-container.dark {
+   .menu-container-outer {
+     //background-position-y: -60px;
+   }
+   .menu-option-container {
+     margin-top: 350px;
+   }
+ }
 }
 
 @media (max-width: 650px) {
@@ -183,11 +210,10 @@
     &.dark {
       .menu-container-outer {
         //background-image: url(../../../public/images/menu/mobile/menu_dark.jpg);
-        background-position-x: 000px;
-        background-position-y: 00px;
-       // backdrop-filter: opacity(0.8);
-       // filter: opacity(0.5);
-        zoom: 0.50;
+       // background-position-y: -60px;
+        // backdrop-filter: opacity(0.8);
+        // filter: opacity(0.5);
+        //zoom: 0.50;
       }
     }
   }
@@ -222,6 +248,12 @@
   .menu-option {
     font-size: 20px;
     line-height: 48px;
+
+    &:last-child {
+      &.dark {
+        line-height: 30px;
+      }
+    }
   }
   .menu-option:not(:last-child) {
     margin-bottom: 2px;
@@ -234,6 +266,4 @@
   .menu-option:hover > svg {
     margin-left: 10px !important;
   }
-
-
 }
