@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/commode/static/css/main.25b5bd76.css",
-    "main.js": "/commode/static/js/main.ab1b254c.js",
-    "static/media/menu_background_lightMode.jpg": "/commode/static/media/menu_background_lightMode.e61afff31155a2cd676d.jpg",
-    "static/media/slider_club_1.jpg": "/commode/static/media/slider_club_1.6a703a61f479c773424a.jpg",
-    "static/media/slider_club_5.jpg": "/commode/static/media/slider_club_5.b4c6bae56e5964ba3e15.jpg",
-    "static/media/slider_restaurant_4.jpg": "/commode/static/media/slider_restaurant_4.1fc7b58be0131ff6df73.jpg",
-    "static/media/slider_restaurant_2.jpg": "/commode/static/media/slider_restaurant_2.ff2fdf8a92fa071e1b4c.jpg",
-    "static/media/slider_restaurant_3.jpg": "/commode/static/media/slider_restaurant_3.d13c10cefba72cdc7407.jpg",
-    "static/media/welcome_rent.jpg": "/commode/static/media/welcome_rent.7a93a02c1595fc60e12e.jpg",
-    "static/media/slider_club_4.jpg": "/commode/static/media/slider_club_4.2e2d972a017271493605.jpg",
-    "static/media/menu_dark.jpg": "/commode/static/media/menu_dark.ca6691f7fd17bf535b4f.jpg",
-    "static/media/slider_club_2.jpg": "/commode/static/media/slider_club_2.761bd93a845e2af796c5.jpg",
-    "static/media/slider_restaurant_5.jpg": "/commode/static/media/slider_restaurant_5.fb182336399794e9a434.jpg",
+    "main.css": "/commode/static/css/main.1455f2fa.css",
+    "main.js": "/commode/static/js/main.5005caac.js",
     "static/media/slider_restaurant_1.jpg": "/commode/static/media/slider_restaurant_1.ed16e2d7551daa80c188.jpg",
+    "static/media/slider_restaurant_4.jpg": "/commode/static/media/slider_restaurant_4.1fc7b58be0131ff6df73.jpg",
+    "static/media/slider_restaurant_5.jpg": "/commode/static/media/slider_restaurant_5.fb182336399794e9a434.jpg",
+    "static/media/slider_club_2.jpg": "/commode/static/media/slider_club_2.d836638c97e44fe1fe17.jpg",
+    "static/media/slider_restaurant_3.jpg": "/commode/static/media/slider_restaurant_3.d13c10cefba72cdc7407.jpg",
+    "static/media/menu_background_lightMode.jpg": "/commode/static/media/menu_background_lightMode.e61afff31155a2cd676d.jpg",
+    "static/media/slider_club_1.jpg": "/commode/static/media/slider_club_1.27d566dacc257ede0a67.jpg",
+    "static/media/slider_club_5.jpg": "/commode/static/media/slider_club_5.6a703a61f479c773424a.jpg",
+    "static/media/slider_club_3.jpg": "/commode/static/media/slider_club_3.03abbcf800c34f1c0277.jpg",
+    "static/media/slider_restaurant_2.jpg": "/commode/static/media/slider_restaurant_2.ff2fdf8a92fa071e1b4c.jpg",
+    "static/media/welcome_rent.jpg": "/commode/static/media/welcome_rent.7a93a02c1595fc60e12e.jpg",
+    "static/media/menu_dark.jpg": "/commode/static/media/menu_dark.ca6691f7fd17bf535b4f.jpg",
+    "static/media/slider_club_4.jpg": "/commode/static/media/slider_club_4.27b09985aee0b3390522.jpg",
     "static/media/menu_background.jpg": "/commode/static/media/menu_background.5e1767bba503fe932f19.jpg",
-    "static/media/slider_club_3.jpg": "/commode/static/media/slider_club_3.b7f9ec0353a13d5b39ff.jpg",
     "static/media/menu_background_dark.jpg": "/commode/static/media/menu_background_dark.d107c25352870c00570c.jpg",
     "static/media/banquet_menu_mobile_small.jpg": "/commode/static/media/banquet_menu_mobile_small.d819bfcc46747229b1d0.jpg",
     "static/media/dialog_graffiti_red.svg": "/commode/static/media/dialog_graffiti_red.7a641d515a9203287829.svg",
@@ -28,11 +28,11 @@
     "index.html": "/commode/index.html",
     "static/media/toggle_left.svg": "/commode/static/media/toggle_left.aa7f802dac72ecfb7688.svg",
     "static/media/toggle_right.svg": "/commode/static/media/toggle_right.1a00ff9e267bbad787c8.svg",
-    "main.25b5bd76.css.map": "/commode/static/css/main.25b5bd76.css.map",
-    "main.ab1b254c.js.map": "/commode/static/js/main.ab1b254c.js.map"
+    "main.1455f2fa.css.map": "/commode/static/css/main.1455f2fa.css.map",
+    "main.5005caac.js.map": "/commode/static/js/main.5005caac.js.map"
   },
   "entrypoints": [
-    "static/css/main.25b5bd76.css",
-    "static/js/main.ab1b254c.js"
+    "static/css/main.1455f2fa.css",
+    "static/js/main.5005caac.js"
   ]
 }
