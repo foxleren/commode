@@ -11,6 +11,7 @@ export default function SchedulePage() {
     // }
 
     return (<section id="schedule" className={`schedule ${isDarkMode ? 'dark' : 'light'}`}>
+            {/*<div className="schedule-title">ПРОГРАММА КАЖДЫЙ ДЕНЬ</div>*/}
             <div className="schedule-days">
                 <div className="schedule-days-container outer">
                     <div className="schedule-days-item">ПН</div>
@@ -23,7 +24,7 @@ export default function SchedulePage() {
                             <div className="schedule-days-item last">СБ</div>
                         </div>
                         <div className="schedule-days-subtext inner">
-                            <span className="schedule-underline"/>
+                            <span className="schedule-underline red"/>
                             <div className={'schedule-days-subtext-text'}>живая музыка</div>
                         </div>
                     </div>
@@ -40,7 +41,7 @@ export default function SchedulePage() {
                  alt={''}/>
             <img className="schedule-person" src={`${contentPrefix}/images/schedule/schedule_person.svg`} alt={''}/>
             <div id={'schedule-messages'} className="schedule-messages hidden">
-                <div id={'schedule-message-1'} className="schedule-message first hidden">и все это с 20:00</div>
+                <div id={'schedule-message-1'} className="schedule-message first hidden">и все это с 21:00</div>
                 <div id={'schedule-message-2'} className="schedule-message second hidden">
                     {isDarkMode ? <span className="schedule-highlight">кстати, апероль <br/> тут по 290 рублей</span> :
                         <span className="schedule-highlight">кстати, тут мидии <br/> по 390 рублей</span>}

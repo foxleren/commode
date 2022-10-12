@@ -16,6 +16,10 @@
 
     .schedule-days-subtext .schedule-underline {
       border-color: #fff;
+
+      &.red {
+        border-color: #ED6A5E;
+      }
     }
 
     .header-button-change-theme-circle, .header-button-change-theme {
@@ -25,8 +29,23 @@
     .header-button-change-theme-text {
       color: #000;
     }
+
+    //.schedule-title {
+    //  color: #000;
+    //}
   }
 }
+
+//.schedule-title {
+//  font-family: 'Attack Type', sans-serif;
+//  font-style: normal;
+//  font-weight: 700;
+//  font-size: 64px;
+//  line-height: 64px;
+//  letter-spacing: 0.12em;
+//  margin-bottom: 43px;
+//  transition: color 0.3s ease-in-out;
+//}
 
 
 .schedule-days {
@@ -73,6 +92,7 @@
 
   &.inner {
     flex-direction: column;
+    color: #ED6A5E;
   }
 
   div {
@@ -108,6 +128,11 @@
     border: 1px solid #000000;
     border-top: none;
     transition: broder-color 0.3s ease-in-out;
+
+    &.red {
+      border: 1px solid #ED6A5E;
+      border-top: none;
+    }
   }
 }
 

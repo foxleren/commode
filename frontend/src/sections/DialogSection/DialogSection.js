@@ -18,9 +18,9 @@ export default function DialogSection() {
             <div id={'dialog-message-1'}
                  className="dialog-message first transparent left hidden">{isDarkMode ? 'где затусим, милейший?' : 'где отобедаем, милейший?'}</div>
             <div id={'dialog-message-2'}
-                 className="dialog-message second white right hidden">в <span>commode</span>{isDarkMode ? ' — это ресторан и клуб, который вместил в себя все: кухню по себестоимости, видовую летнюю террасу на центр Питера, развлекательные программы, DJ-сеты, караоке и лучшие open-air тусовки.' : ' — это ресторан в центре Санкт-петербурга, где подают изысканные горячие блюда и напитки по себестоимости, А расположен он в историческом здании с самой большой террасой в городе.'}
+                 className="dialog-message second white right hidden">в <span>commode</span>{isDarkMode ? ' — это ресторан и клуб, который вместил в себя все: авторские блюда и коктейли по себестоимости, видовую террасу в сердце Невского, живую музыку, DJ-сеты, два больших бара, лаундж зал с кальянами и караоке.' : ' — это ресторан в центре Санкт-Петербурга, где подают изысканные горячие блюда и напитки по себестоимости, a расположен он в историческом здании с самой большой террасой в городе.'}
             </div>
-            <div id={'dialog-message-3'} className="dialog-message third white left hidden">А стоимость пребывания
+            <div id={'dialog-message-3'} className="dialog-message third white left hidden">а стоимость пребывания
                 по
                 пятницам и субботам
                 - <br/>всего <span>4 рубля в минуту?</span>

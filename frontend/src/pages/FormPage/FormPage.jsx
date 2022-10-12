@@ -108,16 +108,16 @@ export default function FormPage({page}) {
                     </div>
                     <span
                         className={`incorrect-phone ${isInputCorrect ? 'hidden' : 'visible'}`}>Введите номер полностью</span>
-                    <div className="book-policy-checkbox">
-                        <input id="policy-checkbox" className={'custom-checkbox'} required type="checkbox"/>
-                        <label className="fake-checkbox" htmlFor="policy-checkbox"/>
-                        <div className="book-policy-checkbox-text"> Я ознакомлен(а) с &nbsp;
-                            <a href={`${contentPrefix}/pdf/pdf_example.pdf`}
-                               download={'Политика конфиденциальности.pdf'}>
-                                политикой конфиденциальности
-                            </a>
-                        </div>
-                    </div>
+                    {/*<div className="book-policy-checkbox">*/}
+                    {/*    <input id="policy-checkbox" className={'custom-checkbox'} required type="checkbox"/>*/}
+                    {/*    <label className="fake-checkbox" htmlFor="policy-checkbox"/>*/}
+                    {/*    <div className="book-policy-checkbox-text"> Я ознакомлен(а) с &nbsp;*/}
+                    {/*        <a href={`${contentPrefix}/pdf/pdf_example.pdf`}*/}
+                    {/*           download={'Политика конфиденциальности.pdf'}>*/}
+                    {/*            политикой конфиденциальности*/}
+                    {/*        </a>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     <button type='submit'>ЗАБРОНИРОВАТЬ</button>
                 </form>
             </div>

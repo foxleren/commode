@@ -1,23 +1,28 @@
 import DialogSection from "../../sections/DialogSection/DialogSection";
-import InteriorPage from "../InteriorPage/InteriorPage";
-import MenuPage from "../MenuPage/MenuPage";
+import InteriorSection from "../../sections/InteriorSection/InteriorSection";
+import MenuSection from "../../sections/MenuSection/MenuSection";
 import SchedulePage from "../SchedulePage/SchedulePage";
 import FormPage from "../FormPage/FormPage";
-import ExtraSliderPage from "../ExtraSliderPage/ExtraSliderPage";
+import ExtraSlider from "../../components/ExtraSlider/ExtraSlider";
 import Map from "../../components/Map/Map";
 import Footer from "../../components/Footer/Footer";
 import usePreloader from "../../hooks/usePreloader";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import Welcome from "../../components/Welcome/Welcome";
 import useTheme from "../../hooks/useTheme";
 //import '../WelcomePage/WelcomePage.scss';
 import './HomePage.scss';
 import Header from "../../components/Header/Header";
+import Notification from "../../components/Notification/Notification";
+import useNotification from "../../hooks/useNotification";
 
 export default function HomePage() {
     const {showPreloader} = usePreloader();
     const {isDarkMode} = useTheme();
-
+    //const [isNotificationVisible, setIsNotificationVisible] = React.useState(false);
+   // const {isNotificationClosed, setIsNotificationClosed] = React.useState(false);
+    const {isNotificationVisible, setIsNotificationVisible, isNotificationClosed, setIsNotificationClosed} = useNotification();
+    //setIsNotificationVisible(!isNotificationVisible);
     // const show = async () => {
     //     await setTimeout(() => console.log('after 5 seconds'), 5000);
     // }
@@ -27,12 +32,21 @@ export default function HomePage() {
         return () => {
             showPreloader(1500);
             window.scrollTo({top: 0});
+            //setIsNotificationVisible();
         }
     }, [])
 
     const [isHeaderVisible, setIsHeaderVisible] = useState(false);
     const [isDialogReady, setIsDialogReady] = useState(false);
     const [isScheduleReady, setIsScheduleReady] = useState(false);
+
+    const tryToShowNotification = (scrolled) => {
+        let interiorSectionPos = window.document.getElementById('interior').offsetTop - 100;
+        if (scrolled > interiorSectionPos && !isNotificationClosed) {
+            setIsNotificationVisible(true);
+            setIsNotificationClosed(true);
+        }
+    }
 
     const tryToShowDialog = (scrolled) => {
         if (!isDialogReady) {
@@ -44,12 +58,12 @@ export default function HomePage() {
             let message2Pos = message2.offsetTop + 350;
             let message3Pos = message3.offsetTop + 350;
             let message4Pos = message4.offsetTop + 350;
-           // console.log(message1.offsetTop)
+            // console.log(message1.offsetTop)
             //let scrolled = window.pageYOffset;
             if (scrolled > message1Pos) {
                 message1.classList.remove('hidden');
                 message1.classList.add('visible');
-            //    console.log('dialog begin')
+                //    console.log('dialog begin')
             }
             if (scrolled > message2Pos) {
                 message2.classList.remove('hidden');
@@ -65,7 +79,7 @@ export default function HomePage() {
                 message4.classList.remove('hidden');
                 message4.classList.add('visible');
                 setIsDialogReady(true);
-             //   console.log('dialog end')
+                //   console.log('dialog end')
                 //  console.log('4')
             }
         }
@@ -82,8 +96,8 @@ export default function HomePage() {
 
     const tryToShowSchedule = (scrolled) => {
         let scheduleMessages = window.document.getElementById('schedule-messages');
-      //  let scheduleMessage2 = window.document.getElementById('schedule-message-2');
-        let scheduleMessagesPos = window.pageYOffset + scheduleMessages.getBoundingClientRect().top  -700;
+        //  let scheduleMessage2 = window.document.getElementById('schedule-message-2');
+        let scheduleMessagesPos = window.pageYOffset + scheduleMessages.getBoundingClientRect().top - 700;
         //let scheduleMessage2Pos = window.pageYOffset + scheduleMessage2.getBoundingClientRect().top;
         // console.log('block pos: ', scheduleMessagesPos);
         // console.log('scroll pos: ', scrolled);
@@ -93,7 +107,7 @@ export default function HomePage() {
             if (scrolled > scheduleMessagesPos) {
                 scheduleMessages.classList.remove('hidden');
                 scheduleMessages.classList.add('visible');
-            //    console.log('schedule begin')
+                //    console.log('schedule begin')
                 setIsScheduleReady(true);
             }
             // if (scrolled > scheduleMessage2Pos) {
@@ -107,13 +121,14 @@ export default function HomePage() {
     }
 
     window.onscroll = () => {
-       // console.log('home');
+        // console.log('home');
 
         // let dialogSection = window.document.getElementById('dialog').offsetTop - 200;
         let scrolled = window.pageYOffset;
-       tryToShowDialog(scrolled);
-       tryToShowFixedHeader(scrolled);
+        tryToShowDialog(scrolled);
+        tryToShowFixedHeader(scrolled);
         tryToShowSchedule(scrolled);
+        tryToShowNotification(scrolled);
         //
         // // window.onscroll = () => {
 
@@ -123,13 +138,16 @@ export default function HomePage() {
         <Header page={'home'} position={'fixed'} isVisible={isHeaderVisible}/>
         <Welcome page={'home'}/>
         <DialogSection/>
-        <InteriorPage/>
-        <MenuPage/>
+        <InteriorSection/>
+        <MenuSection/>
         <SchedulePage/>
         <FormPage page={'home'}/>
-        <ExtraSliderPage/>
+        <ExtraSlider/>
         <Map/>
         <Footer/>
+        <Notification type={'toBook'} content={isDarkMode ? 'Твой праздник в комод' : 'Банкет по себестоимости'}
+                      buttonContent={'Понятно'} isVisible={isNotificationVisible}
+                      action={() => setIsNotificationVisible(false)}/>
     </div>);
 
 }
