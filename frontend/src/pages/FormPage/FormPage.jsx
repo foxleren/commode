@@ -50,9 +50,9 @@ export default function FormPage({page}) {
         e.preventDefault();
         const phoneNumber = `8${toSend.from_number.replace(/[^+\d]/g, '')}`;
         if (isPhoneCorrect(phoneNumber)) {
-            axios.post('http://localhost:8080/emails', {
+            axios.post('https://commode-bot.herokuapp.com/client', {
                 name: toSend.from_name,
-                phoneNumber: phoneNumber
+                phone_number: phoneNumber
             }).then(() => {
                 //console.log('successful request');
                 setIsFormCompleted(true);
