@@ -26,10 +26,10 @@ export default function BanquetHall() {
     const [isLeftDisabled, setIsLeftDisabled] = React.useState(true);
     const [isRightDisabled, setIsRightDisabled] = React.useState(false);
 
-    function changeSlide(actualSlide = currentSlide + 1) {
-        let newSlide = actualSlide === cards.length ? 0 : actualSlide;
-        setCurrentSlide(newSlide)
-    }
+    // function changeSlide(actualSlide = currentSlide + 1) {
+    //     let newSlide = actualSlide === cards.length ? 0 : actualSlide;
+    //     setCurrentSlide(newSlide)
+    // }
 
     if (window.innerWidth <= 1250) {
 

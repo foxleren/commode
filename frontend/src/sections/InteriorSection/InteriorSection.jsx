@@ -2,7 +2,6 @@ import './InteriorSection.scss';
 import Slider from "../../components/Slider/Slider";
 import useTheme from "../../hooks/useTheme";
 import {contentPrefix} from "../../js/globals";
-import {useEffect} from "react";
 
 const content = {
     pc: {

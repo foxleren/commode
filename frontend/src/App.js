@@ -6,7 +6,6 @@ import RentPage from "./pages/RentPage/RentPage";
 import HomePage from "./pages/HomePage/HomePage";
 import {HashRouter, Route, Routes,} from "react-router-dom";
 import usePreloader from "./hooks/usePreloader";
-import useTheme from "./hooks/useTheme";
 import Layout from "./components/Layout/Layout";
 import NotificationProvider from "./providers/NotificationProvider";
 
@@ -14,8 +13,7 @@ import NotificationProvider from "./providers/NotificationProvider";
 export default function App() {
     // const {isVisible, setIsVisible} = usePreloader();
 
-    const {isDarkMode} = useTheme();
-    const {showPreloader, isVisible, setIsVisible} = usePreloader();
+    const {setIsVisible} = usePreloader();
     useEffect(() => {
         setTimeout(() => {
             setIsVisible(false);
