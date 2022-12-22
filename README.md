@@ -1,4 +1,4 @@
-# Сайт для клуба [Commode](https://foxleren.github.io/commode/)
+# Сайт для ресторана [Commode](https://commode.vercel.app/)
 
 ## О проекте:
 ### Frontend — React.js:
